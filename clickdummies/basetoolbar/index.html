@@ -23,7 +23,8 @@
 <link rel="stylesheet" type="text/css" media="all" href="styles.css" />
 
 
-<script type="text/javascript" src="portal_javascripts/Sunburst%20Theme/jquery-integration-cachekey-1b1d5b5235e02c05b16809d2dac3cc08.js"></script>
+<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="bootstrap.min.js"></script>
 
 <title>Welcome to Plone &mdash; Site</title>
 
@@ -70,9 +71,163 @@
                             <a href="#">Rules</a>
                         </li>
                     </ul>
+                    <ul class="nav pull-right">
+                        <li class="dropdown" id="plone-contentmenu-actions">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span>Actions</span> <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="actionicon-object_buttons-cut" id="cut">
+                                    <a href="#">
+                                        <span>Cut</span>
+                                    </a>
+                                </li>
+                                <li class="actionicon-object_buttons-copy" id="copy">
+                                    <a href="#">
+
+                                        <span>Copy</span>
+                                    </a>
+                                </li>
+                                <li class="actionicon-object_buttons-delete" id="delete">
+                                    <a href="#">
+
+                                        <span>Delete</span>
+                                    </a>
+                                </li>
+                                <li class="actionicon-object_buttons-rename" id="rename">
+                                    <a href="#">
+
+                                        <span>Rename</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="plone-contentmenu-display">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span>Display</span> <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="active" id="view">
+                                    <a href="#">
+                                        <span>view</span>
+                                    </a>
+                                </li>
+                                <li class="link-overlay" id="contextSetDefaultPage" rel="#pb_2" style="cursor: pointer; ">
+                                    <a href="#">
+                                        <span>
+                                            Select a content item
+as default view...
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="plone-contentmenu-factories">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span>Add new…</span>
+
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="contenttype-collection" id="collection">
+                                    <a href="#">
+                                        <span>Collection</span>
+                                    </a>
+                                </li>
+                                <li class="contenttype-page" id="page">
+                                    <a href="#">
+                                        <img src="http://localhost:8080/Plone2/++resource++plone.app.layoutpage.images/page_icon.gif" alt="icon">
+                                        <span>Deco Page</span>
+                                    </a>
+                                </li>
+                                <li class="contenttype-event" id="event">
+                                    <a href="#">
+                                        <span>Event</span>
+                                    </a>
+                                </li>
+                                <li class="contenttype-file" id="file">
+                                    <a href="#">
+
+                                        <span>File</span>
+                                    </a>
+                                </li>
+                                <li class="contenttype-folder" id="folder">
+                                    <a href="#">
+                                        <span>Folder</span>
+                                    </a>
+                                </li>
+                                <li class="contenttype-image" id="image">
+                                    <a href="#">
+                                        <span>Image</span>
+                                    </a>
+                                </li>
+                                <li class="contenttype-link" id="link">
+                                    <a href="#">
+                                        <span>Link</span>
+                                    </a>
+                                </li>
+                                <li class="contenttype-news-item" id="news-item">
+                                    <a href="#">
+                                        <span>News Item</span>
+                                    </a>
+                                </li>
+                                <li class="contenttype-document" id="document">
+                                    <a href="#">
+                                        <span>Page</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="plone-contentmenu-workflow">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span>State:</span>
+                                <span class="state-private">Private</span>
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="kssIgnore" id="workflow-transition-publish">
+                                    <a href="#">
+                                        <span>Publish</span>
+                                    </a>
+                                </li>
+                                <li class="kssIgnore" id="workflow-transition-submit">
+                                    <a href="#">
+                                        <span>Submit for publication</span>
+                                    </a>
+                                </li>
+                                <li class="kssIgnore" id="advanced">
+                                    <a href="#">
+                                        <span>Advanced...</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="divider-vertical"></li>
+                        <li class="dropdown" id="plone-personal-actions">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="http://localhost:8080/Plone2/defaultUser.png" alt="user portrait">
+                                <span>admin</span>
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li id="plone-personal-actions-dashboard">
+                                    <a href="#" target="_parent">Dashboard</a>
+                                </li>
+                                <li id="plone-personal-actions-preferences">
+                                    <a href="#">Preferences</a>
+                                </li>
+                                <li id="plone-personal-actions-plone_setup">
+                                    <a href="#">Site Setup</a>
+                                </li>
+                                <li id="plone-personal-actions-logout">
+                                    <a href="#" target="_parent">Log out</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-                <!--/.nav-collapse -->
-            </div>
+                <!--/.nav-collapse --> </div>
         </div>
     </div>
 </div>
