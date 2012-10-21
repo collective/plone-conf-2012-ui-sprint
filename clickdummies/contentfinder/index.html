@@ -21,6 +21,7 @@
 <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="bootstrap.min.js"></script>
 <script src="contentfinder.js" type="text/javascript"></script>
+<script src="finderdata.js" type="text/javascript"></script>
 <script src="chosen/chosen.jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function() {
@@ -749,7 +750,7 @@ individuals and hundreds of companies. The Plone Foundation:
                 <div style="float: left"> <!-- don't remove this. it is needed for DOM traversal -->
                 </div>
 
-            <div id="related_items_finder" class="chzn-container chzn-container-multi" style="width: 350px;">
+            <div id="related_items_finder" class="finder chzn-container chzn-container-multi" style="width: 350px;" data-url="http://localhost:8080/Plone">
                 <ul class="chzn-choices">
                     <li class="search-field">
                         <input type="text" style="width: 172px;" autocomplete="off" class="default" data-placeholder="Click to search or browse">
