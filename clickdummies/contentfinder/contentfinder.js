@@ -139,6 +139,11 @@ ContentFinder.prototype.select_item = function(item) {
             self.select_item(el);
         });
 
+    var dd_top = self.container.height();
+    this.dropdown.css({
+        "top": dd_top + "px"
+    });
+
 };
 
 
