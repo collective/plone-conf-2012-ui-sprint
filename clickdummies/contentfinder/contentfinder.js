@@ -81,6 +81,16 @@ ContentFinder.prototype.select_item = function(item) {
     html.push('<li class="search-field"><input type="text" style="width: 172px;" autocomplete="off" class="default" data-placeholder="Click to search or browse"></li>');
     self.choices.html(html.join(''));
 
+    $('a.search-choice-close', this.chosen)
+        .unbind('.selected')
+        .bind('click.selected', function() {
+            var el = $(this);
+            var uid = el.attr('data-uid');
+            el.parent().remove();
+            var el = $('li.active-result[data-uid="' + uid + '"]');
+            self.select_item(el);
+        });
+
 };
 
 
