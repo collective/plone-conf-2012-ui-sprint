@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta content="Congratulations! You have successfully installed Plone." name="description" />
+<link rel="alternate" data-kss-base-url="kss-base-url" href="front-page/index.html" />
+
+<link rel="stylesheet" type="text/css" href="portal_css/Sunburst%20Theme/base-cachekey-e4fe113eb7cca6d6fa47165b5a40d813.css" />
+<!--[if lt IE 8]>
+
+<link rel="stylesheet" type="text/css" media="screen" href="portal_css/Sunburst%20Theme/IEFixes-cachekey-e761f20eaa7d34a20191d00f3c1f1eb7.css" />
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" media="all" href="portal_css/Sunburst%20Theme/ploneCustom-cachekey-d4071216a2191c0a7c767bd5840a147d.css" />
+<link rel="stylesheet" type="text/css" media="all" href="bootstrap.css" />
+<link rel="stylesheet" type="text/css" media="all" href="styles.css" />
+<link rel="stylesheet" type="text/css" media="all" href="chosen/chosen.css" />
+
+
+<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="bootstrap.min.js"></script>
+<script src="contentfinder.js" type="text/javascript"></script>
+<script src="chosen/chosen.jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".chzn-select").chosen();
+    $(".chzn-select-deselect").chosen({allow_single_deselect:true});
+    }
+)
+</script>
+
+<title>Welcome to Plone &mdash; Site</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<link rel="apple-touch-icon" href="touch_icon.png" />
+
+<link rel="search" href="@@search/index.html" title="Search this site" />
+
+<meta name="viewport" content="width=device-width, initial-scale=0.6666, maximum-scale=1.0, minimum-scale=0.6666" />
+<meta name="generator" content="Plone - http://plone.org" />
+
+</head>
+
+<body class="template-document_view portaltype-document site-Plone section-front-page icons-on" dir="ltr">
+
+<div class="cd">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner" style="display:none">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="nav-collapse collapse">
+                    <p class="navbar-text pull-right">
+                        Logged in as
+                        <a href="#" class="navbar-link">Username</a>
+                    </p>
+                    <ul class="nav">
+                        <li>
+                            <a href="#">Contents</a>
+                        </li>
+                        <li>
+                            <a href="#">View</a>
+                        </li>
+                        <li>
+                            <a href="">Edit</a>
+                        </li>
+                        <li>
+                            <a href="#">Sharing</a>
+                        </li>
+                        <li>
+                            <a href="#">Rules</a>
+                        </li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li class="dropdown" id="plone-contentmenu-actions">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span>Actions</span> <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="actionicon-object_buttons-cut" id="cut">
+                                    <a href="#">
+                                        <span>Cut</span>
+                                    </a>
+                                </li>
+                                <li class="actionicon-object_buttons-copy" id="copy">
+                                    <a href="#">
+
+                                        <span>Copy</span>
+                                    </a>
+                                </li>
+                                <li class="actionicon-object_buttons-delete" id="delete">
+                                    <a href="#">
+
+                                        <span>Delete</span>
+                                    </a>
+                                </li>
+                                <li class="actionicon-object_buttons-rename" id="rename">
+                                    <a href="#">
+
+                                        <span>Rename</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="plone-contentmenu-display">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span>Display</span> <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="active" id="view">
+                                    <a href="#">
+                                        <span>view</span>
+                                    </a>
+                                </li>
+                                <li class="link-overlay" id="contextSetDefaultPage" rel="#pb_2" style="cursor: pointer; ">
+                                    <a href="#">
+                                        <span>
+                                            Select a content item
+as default view...
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="plone-contentmenu-factories">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span>Add new…</span>
+
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="contenttype-collection" id="collection">
+                                    <a href="#">
+                                        <span>Collection</span>
+                                    </a>
+                                </li>
+                                <li class="contenttype-page" id="page">
+                                    <a href="#">
+                                        <img src="http://localhost:8080/Plone2/++resource++plone.app.layoutpage.images/page_icon.gif" alt="icon">
+                                        <span>Deco Page</span>
+                                    </a>
+                                </li>
+                                <li class="contenttype-event" id="event">
+                                    <a href="#">
+                                        <span>Event</span>
+                                    </a>
+                                </li>
+                                <li class="contenttype-file" id="file">
+                                    <a href="#">
+
+                                        <span>File</span>
+                                    </a>
+                                </li>
+                                <li class="contenttype-folder" id="folder">
+                                    <a href="#">
+                                        <span>Folder</span>
+                                    </a>
+                                </li>
+                                <li class="contenttype-image" id="image">
+                                    <a href="#">
+                                        <span>Image</span>
+                                    </a>
+                                </li>
+                                <li class="contenttype-link" id="link">
+                                    <a href="#">
+                                        <span>Link</span>
+                                    </a>
+                                </li>
+                                <li class="contenttype-news-item" id="news-item">
+                                    <a href="#">
+                                        <span>News Item</span>
+                                    </a>
+                                </li>
+                                <li class="contenttype-document" id="document">
+                                    <a href="#">
+                                        <span>Page</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="plone-contentmenu-workflow">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span>State:</span>
+                                <span class="state-private">Private</span>
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="kssIgnore" id="workflow-transition-publish">
+                                    <a href="#">
+                                        <span>Publish</span>
+                                    </a>
+                                </li>
+                                <li class="kssIgnore" id="workflow-transition-submit">
+                                    <a href="#">
+                                        <span>Submit for publication</span>
+                                    </a>
+                                </li>
+                                <li class="kssIgnore" id="advanced">
+                                    <a href="#">
+                                        <span>Advanced...</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="divider-vertical"></li>
+                        <li class="dropdown" id="plone-personal-actions">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="http://localhost:8080/Plone2/defaultUser.png" alt="user portrait">
+                                <span>admin</span>
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li id="plone-personal-actions-dashboard">
+                                    <a href="#" target="_parent">Dashboard</a>
+                                </li>
+                                <li id="plone-personal-actions-preferences">
+                                    <a href="#">Preferences</a>
+                                </li>
+                                <li id="plone-personal-actions-plone_setup">
+                                    <a href="#">Site Setup</a>
+                                </li>
+                                <li id="plone-personal-actions-logout">
+                                    <a href="#" target="_parent">Log out</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse --> </div>
+        </div>
+    </div>
+</div>
+
+<div id="visual-portal-wrapper">
+
+    <div id="portal-top" class="row">
+        <div class="cell width-full position-0">
+            <div id="portal-header">
+                <div id="portal-personaltools-wrapper">
+                    <ul class="actionMenu deactivated" id="portal-personaltools">
+                        <li id="anon-personalbar">
+                            <a href="login/index.html" id="personaltools-login">Log in</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="portal-searchbox">
+
+                    <form name="searchform" id="searchGadget_form" action="http://localhost:8081/Plone/@@search">
+
+                        <div class="LSBox">
+                            <label class="hiddenStructure" for="searchGadget">Search Site</label>
+
+                            <input name="SearchableText" type="text" size="18" title="Search Site" placeholder="Search Site" accesskey="4" class="searchField" id="searchGadget" />
+
+                            <input class="searchButton" type="submit" value="Search" />
+
+                            <div class="searchSection">
+                                <input id="searchbox_currentfolder_only" class="noborder" type="checkbox" name="path" value="/Plone" />
+                                <label for="searchbox_currentfolder_only" style="cursor: pointer">only in current section</label>
+                            </div>
+
+                            <div class="LSResult" id="LSResult" style="">
+                                <div class="LSShadow" id="LSShadow"></div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div id="portal-advanced-search" class="hiddenStructure">
+                        <a href="@@search/index.html" accesskey="5">Advanced Search&hellip;</a>
+                    </div>
+
+                </div>
+
+                <a id="portal-logo" title="Site" accesskey="1" href="index.html">
+                    <img src="logo.png" alt="Site" title="Site" height="56" width="215" />
+                </a>
+
+                <h5 class="hiddenStructure">Sections</h5>
+
+                <ul id="portal-globalnav">
+                    <li id="portaltab-index_html" class="selected">
+                        <a href="index.html" title="">Home</a>
+                    </li>
+                    <li id="portaltab-news" class="plain">
+                        <a href="news/index.html" title="Site News">News</a>
+                    </li>
+                    <li id="portaltab-events" class="plain">
+                        <a href="events/index.html" title="Site Events">Events</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+    <div id="portal-columns" class="row">
+
+<div class="cell width-full position-0" id="portal-column-content">
+
+            <div id="viewlet-above-content"><div id="portal-breadcrumbs">
+
+    <span id="breadcrumbs-you-are-here">You
+are here:</span>
+    <span id="breadcrumbs-home">
+        <a href="http://127.0.0.1:8080/Plone">Home</a>
+        
+    </span>
+
+</div>
+
+<div id="plone-lock-status">
+  
+</div>
+</div>
+
+            
+                <div class="documentEditable">
+
+                    <div id="edit-bar">
+
+    
+
+        <h5 class="hiddenStructure">Views</h5>
+
+        <ul id="content-views" class="contentViews">
+
+            
+              <li class="plain" id="contentview-folderContents">
+                <a href="http://127.0.0.1:8080/Plone/folder_contents">Contents</a>
+              </li>
+            
+            
+              <li class="plain" id="contentview-view">
+                <a href="http://127.0.0.1:8080/Plone/front-page">View</a>
+              </li>
+            
+            
+              <li class="selected" id="contentview-edit">
+                <a href="http://127.0.0.1:8080/Plone/front-page/edit">Edit</a>
+              </li>
+            
+            
+              <li class="plain" id="contentview-contentrules">
+                <a href="http://127.0.0.1:8080/Plone/@@manage-content-rules">Rules</a>
+              </li>
+            
+            
+              <li class="plain" id="contentview-local_roles">
+                <a href="http://127.0.0.1:8080/Plone/front-page/@@sharing">Sharing</a>
+              </li>
+            
+
+        </ul>
+
+    
+
+
+<div class="contentActions">
+
+</div></div>
+
+                    
+
+    <dl style="display:none" id="kssPortalMessage" class="portalMessage info">
+        <dt>Info</dt>
+        <dd></dd>
+    </dl>
+
+
+
+                    
+                        <div id="content">
+
+                            
+
+                            
+      
+        <div>
+      
+        
+        <h1 class="documentFirstHeading">
+          Edit
+          <span> Page </span>
+        </h1>
+
+    </div>
+        <div>
+        
+    </div>
+        <div>
+      <form id="document-base-edit" action="http://127.0.0.1:8080/Plone/front-page/atct_edit" class="enableUnloadProtection enableAutoFocus enableFormTabbing enableUnlockProtection" enctype="multipart/form-data" method="post" name="edit_form"><ul class="formTabs"><li class="formTab firstFormTab"><a href="#fieldsetlegend-default" id="fieldsetlegend-default" class="required"><span>Default</span></a></li><li class="formTab"><a href="#fieldsetlegend-categorization" id="fieldsetlegend-categorization" class="selected"><span>Categorization</span></a></li><li class="formTab"><a href="#fieldsetlegend-dates" id="fieldsetlegend-dates"><span>Dates</span></a></li><li class="formTab"><a href="#fieldsetlegend-ownership" id="fieldsetlegend-ownership"><span>Ownership</span></a></li><li class="formTab lastFormTab"><a href="#fieldsetlegend-settings" id="fieldsetlegend-settings"><span>Settings</span></a></li></ul>
+          
+
+          
+
+          
+            
+              
+                <fieldset id="fieldset-default" class="formPanel" style="display: none;">
+                  <legend id="fieldsetlegend-default" style="display: none;">Default</legend>
+                  
+                    
+
+      
+        
+        
+            <input type="hidden" value="front-page" name="id" originalvalue="front-page">
+        
+      
+    
+                  
+                  
+                    
+      
+      
+        <div id="archetypes-fieldname-title" data-uid="811793d984af4c2dbdf4db2080df1e27" data-fieldname="title" class="field ArchetypesStringWidget  kssattr-atfieldname-title">
+          <span></span>
+          
+          
+            <label for="title" class="formQuestion">
+                Title
+                <span title="Required" class="required">&nbsp;</span>
+                <span id="title_help" class="formHelp"></span>
+            </label>
+          
+          
+          <div class="fieldErrorBox"></div>
+          <input type="text" placeholder="" maxlength="255" size="30" value="Welcome to Plone" id="title" class="blurrable firstToFocus" name="title">
+        </div>
+      
+
+      
+
+    
+    
+                  
+                  
+                    
+      
+      
+        <div id="archetypes-fieldname-description" data-uid="811793d984af4c2dbdf4db2080df1e27" data-fieldname="description" class="field ArchetypesTextAreaWidget  kssattr-atfieldname-description">
+          <span></span>
+          
+          
+            <label for="description" class="formQuestion">
+                Summary
+                
+                <span id="description_help" class="formHelp">Used in item listings and search results.</span>
+            </label>
+          
+          
+          <div class="fieldErrorBox"></div>
+          
+          
+      
+
+        <textarea id="description" cols="40" name="description" rows="5" class="blurrable firstToFocus">Congratulations! You have successfully installed Plone.</textarea>
+
+            
+
+            
+
+      
+    
+          
+      
+
+        
+        
+          <input type="hidden" value="text/plain" name="description_text_format" originalvalue="text/plain">
+        
+      
+    
+        
+        </div>
+      
+
+      
+
+    
+    
+                  
+                  
+                    
+      
+      
+        <div id="archetypes-fieldname-text" data-uid="811793d984af4c2dbdf4db2080df1e27" data-fieldname="text" class="field ArchetypesRichWidget  kssattr-atfieldname-text">
+          <span></span>
+          
+          
+            <label for="text" class="formQuestion">
+                Body Text
+                
+                <span id="text_help" class="formHelp"></span>
+            </label>
+          
+          
+          <div class="fieldErrorBox"></div>
+          
+          
+              
+      
+
+<div class="fieldTextFormat">
+    <label>Text Format</label>
+
+    <select name="text_text_format" id="text_text_format" tabindex="-1">
+      <option value="text/html" selected="selected">HTML</option>
+      <option value="text/x-web-textile">Textile</option>
+      <option value="text/x-plone-outputfilters-html">Plone Output Filters HTML</option>
+    </select>
+</div>
+
+
+
+      
+    
+          
+          
+      
+        <div>
+  
+   <div>
+  
+  <textarea id="text" class="mce_editable" name="text" rows="25" cols="40" style="display: none;" aria-hidden="true">&lt;p class="discreet"&gt;
+If you're seeing this instead of the web site you were expecting, the owner of
+this web site has just installed Plone. Do not contact the Plone Team or the
+Plone mailing lists about this.
+&lt;/p&gt;
+
+&lt;h2&gt;Get started&lt;/h2&gt;
+
+&lt;p&gt;
+Before you start exploring your newly created Plone site, please do the following:
+&lt;/p&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;Make sure you are logged in as an admin/manager user.
+        &lt;span class="discreet"&gt;(You should have a Site Setup entry in the menu in the top right corner)&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="@@mail-controlpanel"&gt;Set up your mail server&lt;/a&gt;. &lt;span class="discreet"&gt;(Plone needs a valid SMTP server to verify users and send out password reminders)&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="@@security-controlpanel"&gt;Decide what security level you want on your site&lt;/a&gt;. &lt;span class="discreet"&gt;(Allow self registration, password policies, etc)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;Get comfortable&lt;/h2&gt;
+
+&lt;p&gt;After that, we suggest you do one or more of the following:&lt;/p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;Find out &lt;a class="link-plain" href="http://plone.org/products/plone/features/" target="_blank"&gt;What's new in Plone&lt;/a&gt;.&lt;/li&gt;
+    &lt;li&gt;Read the &lt;a class="link-plain" href="http://plone.org/documentation" target="_blank"&gt;documentation&lt;/a&gt;, especially the
+        &lt;a class="link-plain" href="http://plone.org/documentation/phc_topic_area?topic=Basic+Use" target="_blank"&gt;Documentation for content editors&lt;/a&gt;
+        and
+        &lt;a class="link-plain" href="http://plone.org/documentation/faq/server-recommendations" target="_blank"&gt;Server setup recommendations&lt;/a&gt;.
+    &lt;/li&gt;
+    &lt;li&gt;Explore the &lt;a class="link-plain" href="http://plone.org/products" target="_blank"&gt;available add-ons&lt;/a&gt; for Plone.&lt;/li&gt;
+    &lt;li&gt;Read and/or subscribe to the &lt;a class="link-plain" href="http://plone.org/support" target="_blank"&gt;support forums&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Make it your own&lt;/h2&gt;
+
+&lt;p&gt;Plone has a lot of different settings that can be used to make it do what you want it to. Some examples:&lt;/p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;
+    Try out a different theme, either pick from
+    &lt;a href="@@skins-controlpanel"&gt;the included ones&lt;/a&gt;, or one of the
+    &lt;a class="link-plain" href="http://plone.org/products/by-category/themes" target="_blank"&gt;available themes
+       from plone.org&lt;/a&gt;. &lt;span class="discreet"&gt;(Make sure the theme is
+       compatible with the version of Plone you are currently using)&lt;/span&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+    &lt;a href="@@types-controlpanel"&gt;
+    Decide what kind of workflow you want in your site.&lt;/a&gt;
+    &lt;span class="discreet"&gt;(The default is a
+    website-centric workflow, if you want to use Plone as a closed intranet,
+    you should adjust your workflow settings accordingly)&lt;/span&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+    By default, Plone uses a visual editor for content.
+    &lt;span class="discreet"&gt;(If you prefer text-based syntax and/or wiki
+        syntax, you can change this in the
+    &lt;a href="@@markup-controlpanel"&gt;markup control panel&lt;/a&gt;)&lt;/span&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;…and many more settings are available in the
+        &lt;a href="plone_control_panel"&gt;Site Setup&lt;/a&gt;.
+    &lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;h2&gt;Tell us how you use it&lt;/h2&gt;
+
+&lt;p&gt;
+Are you doing something interesting with Plone? Big site deployments,
+interesting use cases? Do you have a company that delivers Plone-based
+solutions?
+&lt;/p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;Add your sites to the &lt;a class="link-plain" href="http://plone.net/sites" target="_blank"&gt;Plone site listing&lt;/a&gt;.
+        &lt;span class="discreet"&gt;(Or see what sites are already out there!)&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Add your company as a &lt;a class="link-plain" href="http://plone.net/providers" target="_blank"&gt;Plone provider&lt;/a&gt;.&lt;/li&gt;
+    &lt;li&gt;Add a &lt;a class="link-plain" href="http://plone.net/case-studies" target="_blank"&gt;case study&lt;/a&gt; describing your
+        deployed project and customer.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Find out more about our architecture&lt;/h2&gt;
+
+&lt;p&gt;
+Plone is based on the Zope application server, and uses the Python programming
+language. More about these technologies:
+&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The &lt;a class="link-plain" href="http://plone.org" target="_blank"&gt;Plone open source
+    Content Management System&lt;/a&gt; web site.&lt;/li&gt;
+&lt;li&gt;The &lt;a class="link-plain" href="http://zope2.zope.org" target="_blank"&gt;Zope
+    application server&lt;/a&gt; web site.&lt;/li&gt;
+&lt;li&gt;The &lt;a class="link-plain" href="http://www.python.org" target="_blank"&gt;Python
+    programming language&lt;/a&gt; web site.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Donate to the Plone Foundation&lt;/h2&gt;
+
+&lt;p&gt;
+Plone is made possible only through the efforts of thousands of dedicated
+individuals and hundreds of companies. The Plone Foundation:
+&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;…protects and promotes Plone.&lt;/li&gt;
+    &lt;li&gt;…is a registered 501(c)(3) charitable organization.&lt;/li&gt;
+    &lt;li&gt;…donations are tax-deductible.&lt;/li&gt;
+    &lt;li&gt;&lt;a href="http://plone.org/foundation/foundation-donations"&gt;Show your support!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thanks for using our product, we hope you like it!&lt;/p&gt;
+
+&lt;p&gt;&mdash;The Plone Team&lt;/p&gt;</textarea><span role="application" aria-labelledby="text_voice" id="text_parent" class="mceEditor ploneSkin"><span class="mceVoiceLabel" style="display:none;" id="text_voice">Rich Text Area</span><table cellspacing="0" cellpadding="0" role="presentation" id="text_tbl" class="mceLayout" style="width: 1540px; height: 394px;"><tbody><tr role="presentation" class="mceFirst"><td class="mceToolbar mceLeft mceFirst mceLast" role="presentation"><div aria-labelledby="text_toolbargroup_voice" role="group" id="text_toolbargroup" tabindex="-1"><span role="application"><span style="display:none;" class="mceVoiceLabel" id="text_toolbargroup_voice">Toolbar</span><table align="" cellspacing="0" cellpadding="0" tabindex="-1" role="presentation" class="mceToolbar mceToolbarRow1 Enabled" id="text_toolbar1" aria-disabled="false" aria-pressed="false"><tbody><tr><td class="mceToolbarStart mceToolbarStartButton mceFirst"><span><!-- IE --></span></td><td style="position: relative"><a title="Save" aria-labelledby="text_save_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_save" href="javascript:;" id="text_save" role="button" tabindex="-1"><span class="mceIcon mce_save"></span><span id="text_save_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Save</span></a></td><td class="mceToolbarEnd"><span><!-- IE --></span></td><td style="position: relative"><span aria-describedby="text_style_text_voiceDesc" aria-labelledby="text_style_text_voiceDesc" aria-haspopup="true" role="listbox"><table cellspacing="0" cellpadding="0" class="mceListBox mceListBoxEnabled mce_style_text" id="text_style_text" tabindex="-1" role="presentation" aria-valuenow="Style..."><tbody><tr><td class="mceFirst"><span style="display:none;" class="voiceLabel" id="text_style_text_voiceDesc">Style...</span><a onmousedown="return false;" onclick="return false;" class="mceText mceTitle" href="javascript:;" tabindex="-1" id="text_style_text_text">Style...</a></td><td class="mceLast"><a onmousedown="return false;" onclick="return false;" class="mceOpen" href="javascript:;" tabindex="-1" id="text_style_text_open"><span><span aria-hidden="true" class="mceIconOnly" style="display:none;">▼</span></span></a></td></tr></tbody></table></span></td><td class="mceToolbarStart"><span><!-- IE --></span></td><td style="position: relative"><a title="Bold (Ctrl+B)" aria-labelledby="text_bold_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_bold" href="javascript:;" id="text_bold" role="button" tabindex="-1"><span class="mceIcon mce_bold"></span><span id="text_bold_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Bold (Ctrl+B)</span></a></td><td style="position: relative"><a title="Italic (Ctrl+I)" aria-labelledby="text_italic_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_italic" href="javascript:;" id="text_italic" role="button" tabindex="-1"><span class="mceIcon mce_italic"></span><span id="text_italic_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Italic (Ctrl+I)</span></a></td><td style="position: relative"><a title="Align Left" aria-labelledby="text_justifyleft_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_justifyleft" href="javascript:;" id="text_justifyleft" role="button" tabindex="-1"><span class="mceIcon mce_justifyleft"></span><span id="text_justifyleft_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Align Left</span></a></td><td style="position: relative"><a title="Align Center" aria-labelledby="text_justifycenter_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_justifycenter" href="javascript:;" id="text_justifycenter" role="button" tabindex="-1"><span class="mceIcon mce_justifycenter"></span><span id="text_justifycenter_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Align Center</span></a></td><td style="position: relative"><a title="Align Right" aria-labelledby="text_justifyright_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_justifyright" href="javascript:;" id="text_justifyright" role="button" tabindex="-1"><span class="mceIcon mce_justifyright"></span><span id="text_justifyright_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Align Right</span></a></td><td style="position: relative"><a title="Align Full" aria-labelledby="text_justifyfull_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_justifyfull" href="javascript:;" id="text_justifyfull" role="button" tabindex="-1"><span class="mceIcon mce_justifyfull"></span><span id="text_justifyfull_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Align Full</span></a></td><td style="position: relative"><a title="Insert/Remove Bulleted List" aria-labelledby="text_bullist_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_bullist" href="javascript:;" id="text_bullist" role="button" tabindex="-1" aria-pressed="false"><span class="mceIcon mce_bullist"></span><span id="text_bullist_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Insert/Remove Bulleted List</span></a></td><td style="position: relative"><a title="Insert/Remove Numbered List" aria-labelledby="text_numlist_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_numlist" href="javascript:;" id="text_numlist" role="button" tabindex="-1" aria-pressed="false"><span class="mceIcon mce_numlist"></span><span id="text_numlist_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Insert/Remove Numbered List</span></a></td><td style="position: relative"><a title="Definition list" aria-labelledby="text_definitionlist_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_definitionlist" href="javascript:;" id="text_definitionlist" role="button" tabindex="-1"><img alt="Definition list" src="http://127.0.0.1:8080/Plone/portal_javascripts/Sunburst%20Theme/plugins/definitionlist/img/definitionlist.gif" class="mceIcon"><span id="text_definitionlist_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Definition list</span></a></td><td style="position: relative"><a title="Decrease Indent" aria-labelledby="text_outdent_voice" onclick="return false;" onmousedown="return false;" class="mceButton mce_outdent mceButtonDisabled" href="javascript:;" id="text_outdent" role="button" tabindex="-1" aria-disabled="true"><span class="mceIcon mce_outdent"></span><span id="text_outdent_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Decrease Indent</span></a></td><td style="position: relative"><a title="Increase Indent" aria-labelledby="text_indent_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_indent" href="javascript:;" id="text_indent" role="button" tabindex="-1"><span class="mceIcon mce_indent"></span><span id="text_indent_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Increase Indent</span></a></td><td class="mceToolbarEnd mceToolbarEndButton mceLast"><span><!-- IE --></span></td></tr></tbody></table><table align="" cellspacing="0" cellpadding="0" tabindex="-1" role="presentation" class="mceToolbar mceToolbarRow2 Enabled" id="text_toolbar2" aria-disabled="false" aria-pressed="false"><tbody><tr><td class="mceToolbarStart mceToolbarStartButton mceFirst"><span><!-- IE --></span></td><td style="position: relative"><a title="Insert/Edit Image" aria-labelledby="text_image_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_image" href="javascript:;" id="text_image" role="button" tabindex="-1"><span class="mceIcon mce_image"></span><span id="text_image_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Insert/Edit Image</span></a></td><td style="position: relative"><a title="Insert/Edit Link" aria-labelledby="text_link_voice" onclick="return false;" onmousedown="return false;" class="mceButton mce_link mceButtonDisabled" href="javascript:;" id="text_link" role="button" tabindex="-1" aria-disabled="true"><span class="mceIcon mce_link"></span><span id="text_link_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Insert/Edit Link</span></a></td><td style="position: relative"><a title="Unlink" aria-labelledby="text_unlink_voice" onclick="return false;" onmousedown="return false;" class="mceButton mce_unlink mceButtonDisabled" href="javascript:;" id="text_unlink" role="button" tabindex="-1" aria-disabled="true"><span class="mceIcon mce_unlink"></span><span id="text_unlink_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Unlink</span></a></td><td style="position: relative"><a title="Insert/Edit Anchor" aria-labelledby="text_anchor_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_anchor" href="javascript:;" id="text_anchor" role="button" tabindex="-1"><span class="mceIcon mce_anchor"></span><span id="text_anchor_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Insert/Edit Anchor</span></a></td><td style="position: relative"><a title="Insert/Edit Table" aria-labelledby="text_table_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_table" href="javascript:;" id="text_table" role="button" tabindex="-1"><span class="mceIcon mce_table"></span><span id="text_table_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Insert/Edit Table</span></a></td><td style="position: relative"><span tabindex="-1" aria-orientation="vertical" role="separator" class="mceSeparator"></span></td><td style="position: relative"><a title="Insert Row Before" aria-labelledby="text_row_before_voice" onclick="return false;" onmousedown="return false;" class="mceButton mce_row_before mceButtonDisabled" href="javascript:;" id="text_row_before" role="button" tabindex="-1" aria-disabled="true"><span class="mceIcon mce_row_before"></span><span id="text_row_before_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Insert Row Before</span></a></td><td style="position: relative"><a title="Insert Row After" aria-labelledby="text_row_after_voice" onclick="return false;" onmousedown="return false;" class="mceButton mce_row_after mceButtonDisabled" href="javascript:;" id="text_row_after" role="button" tabindex="-1" aria-disabled="true"><span class="mceIcon mce_row_after"></span><span id="text_row_after_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Insert Row After</span></a></td><td style="position: relative"><a title="Delete Row" aria-labelledby="text_delete_row_voice" onclick="return false;" onmousedown="return false;" class="mceButton mce_delete_row mceButtonDisabled" href="javascript:;" id="text_delete_row" role="button" tabindex="-1" aria-disabled="true"><span class="mceIcon mce_delete_row"></span><span id="text_delete_row_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Delete Row</span></a></td><td style="position: relative"><span tabindex="-1" aria-orientation="vertical" role="separator" class="mceSeparator"></span></td><td style="position: relative"><a title="Insert Column Before" aria-labelledby="text_col_before_voice" onclick="return false;" onmousedown="return false;" class="mceButton mce_col_before mceButtonDisabled" href="javascript:;" id="text_col_before" role="button" tabindex="-1" aria-disabled="true"><span class="mceIcon mce_col_before"></span><span id="text_col_before_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Insert Column Before</span></a></td><td style="position: relative"><a title="Insert Column After" aria-labelledby="text_col_after_voice" onclick="return false;" onmousedown="return false;" class="mceButton mce_col_after mceButtonDisabled" href="javascript:;" id="text_col_after" role="button" tabindex="-1" aria-disabled="true"><span class="mceIcon mce_col_after"></span><span id="text_col_after_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Insert Column After</span></a></td><td style="position: relative"><a title="Delete Column" aria-labelledby="text_delete_col_voice" onclick="return false;" onmousedown="return false;" class="mceButton mce_delete_col mceButtonDisabled" href="javascript:;" id="text_delete_col" role="button" tabindex="-1" aria-disabled="true"><span class="mceIcon mce_delete_col"></span><span id="text_delete_col_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Delete Column</span></a></td><td style="position: relative"><span tabindex="-1" aria-orientation="vertical" role="separator" class="mceSeparator"></span></td><td style="position: relative"><a title="Split Merged Table Cells" aria-labelledby="text_split_cells_voice" onclick="return false;" onmousedown="return false;" class="mceButton mce_split_cells mceButtonDisabled" href="javascript:;" id="text_split_cells" role="button" tabindex="-1" aria-disabled="true"><span class="mceIcon mce_split_cells"></span><span id="text_split_cells_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Split Merged Table Cells</span></a></td><td style="position: relative"><a title="Merge Table Cells" aria-labelledby="text_merge_cells_voice" onclick="return false;" onmousedown="return false;" class="mceButton mce_merge_cells mceButtonDisabled" href="javascript:;" id="text_merge_cells" role="button" tabindex="-1" aria-disabled="true"><span class="mceIcon mce_merge_cells"></span><span id="text_merge_cells_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Merge Table Cells</span></a></td><td style="position: relative"><a title="Edit HTML Source" aria-labelledby="text_code_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_code" href="javascript:;" id="text_code" role="button" tabindex="-1"><span class="mceIcon mce_code"></span><span id="text_code_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Edit HTML Source</span></a></td><td style="position: relative"><a title="Toggle Full Screen Mode" aria-labelledby="text_fullscreen_voice" onclick="return false;" onmousedown="return false;" class="mceButton mceButtonEnabled mce_fullscreen" href="javascript:;" id="text_fullscreen" role="button" tabindex="-1" aria-pressed="false"><span class="mceIcon mce_fullscreen"></span><span id="text_fullscreen_voice" style="display: none;" class="mceVoiceLabel mceIconOnly">Toggle Full Screen Mode</span></a></td><td class="mceToolbarEnd mceToolbarEndButton mceLast"><span><!-- IE --></span></td></tr></tbody></table></span></div><a onfocus="tinyMCE.getInstanceById('text').focus();" title="Jump to tool buttons - Alt+Q, Jump to editor - Alt-Z, Jump to element path - Alt-X" accesskey="z" href="#"><!-- IE --></a></td></tr><tr><td class="mceIframeContainer mceFirst mceLast"><iframe frameborder="0" id="text_ifr" src="javascript:&quot;&quot;" allowtransparency="true" title="Rich Text AreaPress ALT-F10 for toolbar. Press ALT-0 for help" style="width: 100%; height: 327px; display: block;"></iframe></td></tr><tr class="mceLast"><td class="mceStatusbar mceFirst mceLast"><div id="text_path_row" role="group" aria-labelledby="text_path_voice"><span>&nbsp;</span></div><a id="text_resize" href="javascript:;" onclick="return false;" class="mceResize" tabindex="-1"></a></td></tr></tbody></table></span>
+
+  <div style="margin-top: -1em;" class="discreet suppressVisualEditor">
+    <a href="http://127.0.0.1:8080/Plone/front-page/atct_edit?tinymce.suppress=text&amp;">
+      Edit without visual editor
+    </a>
+  </div>
+  
+
+
+  
+</div>
+  
+</div>
+      
+      
+    
+          <div class="fieldUploadFile">
+              <span class="discreet">or upload a file (existing content will be replaced)</span>
+              <input type="file" id="text_file" name="text_file" size="30" originalvalue="">
+          </div>
+        
+        </div>
+      
+
+      
+
+    
+    
+                  
+                </fieldset>
+              
+              
+                <fieldset id="fieldset-categorization" class="formPanel" style="display: block;">
+                  <legend id="fieldsetlegend-categorization" style="display: none;">Categorization</legend>
+                  
+                    
+            
+      
+        <div id="archetypes-fieldname-subject" data-uid="811793d984af4c2dbdf4db2080df1e27" data-fieldname="subject" class="field ArchetypesKeywordWidget  kssattr-atfieldname-subject">
+          <span></span>
+          
+          
+            <label for="subject" class="formQuestion">
+                Tags
+                
+                <span id="subject_help" class="formHelp">Tags are commonly used for ad-hoc organization of content.</span>
+            </label>
+          
+          
+          <div class="fieldErrorBox"></div>
+          
+                        	
+            		<div id="subject-tags" class="tagsContainer">
+	                    
+	                    
+	                    
+	                        <dl class="newTagsSection">
+	                            <label for="subject_keywords">
+	                                <dt class="newTagsTitle">
+	                                    <span>
+	                                        Create and apply new tags. 
+	                                    </span>
+	                                </dt>
+	                                <span class="newTagsHelp formHelp">
+	                                    Enter one tag per line, multiple words allowed.
+	                                </span>
+	                            </label>
+	                            <br>
+	                            <dd class="newTags">
+	                                <textarea rows="4" name="subject_keywords:lines" id="subject_keywords"></textarea>
+	                            </dd>
+	                        </dl>
+	                    
+					</div>
+              
+                
+        </div>
+      
+
+      
+
+    
+        
+                  
+                  
+                    
+      
+      
+        <div id="archetypes-fieldname-relatedItems" data-uid="811793d984af4c2dbdf4db2080df1e27" data-fieldname="relatedItems" class="field ArchetypesReferenceBrowserWidget  kssattr-atfieldname-relatedItems">
+          
+            <label for="relatedItems" class="formQuestion">
+                Related Items
+                <span id="relatedItems_help" class="formHelp"></span>
+            </label>
+          
+          <div class="fieldErrorBox"></div>
+          
+                <input type="hidden" name="relatedItems:default:list" value="" originalvalue="">
+
+                <input type="hidden" name="relatedItems-sortable" value="1" originalvalue="1">
+
+                <div style="float: left"> <!-- don't remove this. it is needed for DOM traversal -->
+                </div>
+
+            <div id="related_items_finder" class="chzn-container chzn-container-multi" style="width: 350px;">
+                <ul class="chzn-choices">
+                    <li class="search-field">
+                        <input type="text" style="width: 172px;" autocomplete="off" class="default" value="Click to search or browse">
+                    </li>
+                </ul>
+                <div style="left: -9000px; width: 348px; top: 29px;" class="chzn-drop">
+                    <div class="chzn-pathbar">
+                        <strong>You are here:</strong>
+                        <span id="internalpath">
+                            <span>Home</span>
+                        </span>
+                    </div>
+                    <ul class="chzn-results">
+                    </ul>
+                </div>
+            </div>
+      
+        </div>
+      
+        <div id="archetypes-fieldname-location" data-uid="811793d984af4c2dbdf4db2080df1e27" data-fieldname="location" class="field ArchetypesStringWidget  kssattr-atfieldname-location">
+          <span></span>
+          
+          
+            <label for="location" class="formQuestion">
+                Location
+                
+                <span id="location_help" class="formHelp">The geographical location associated with the item, if applicable.</span>
+            </label>
+          
+          
+          <div class="fieldErrorBox"></div>
+          <input type="text" placeholder="" maxlength="255" size="30" value="" id="location" class="blurrable firstToFocus" name="location" originalvalue="">
+        </div>
+      
+
+      
+
+    
+    
+                  
+                  
+                    
+        
+      
+        <div id="archetypes-fieldname-language" data-uid="811793d984af4c2dbdf4db2080df1e27" data-fieldname="language" class="field ArchetypesLanguageWidget  kssattr-atfieldname-language">
+          <span></span>
+          
+          
+            <label for="language" class="formQuestion">
+                Language
+                
+                <span id="language_help" class="formHelp"></span>
+            </label>
+          
+          
+          <div class="fieldErrorBox"></div>
+          
+                
+                
+                    <!-- Pulldown when longer -->
+                    <select id="language" name="language">
+                        <option value="">Language neutral</option>
+                        <option value="ab">Abkhazian</option>
+                        <option value="aa">Afar</option>
+                        <option value="af">Afrikaans</option>
+                        <option value="ak">Akan</option>
+                        <option value="sq">Albanian</option>
+                        <option value="am">Amharic</option>
+                        <option value="ar">Arabic</option>
+                        <option value="an">Aragonese</option>
+                        <option value="hy">Armenian</option>
+                        <option value="as">Assamese</option>
+                        <option value="ae">Avestan</option>
+                        <option value="ay">Aymara</option>
+                        <option value="az">Azerbaijani</option>
+                        <option value="bm">Bambara</option>
+                        <option value="ba">Bashkir</option>
+                        <option value="eu">Basque</option>
+                        <option value="be">Belarussian</option>
+                        <option value="bn">Bengali</option>
+                        <option value="bh">Bihari</option>
+                        <option value="bi">Bislama</option>
+                        <option value="bs">Bosnian</option>
+                        <option value="br">Breton</option>
+                        <option value="bg">Bulgarian</option>
+                        <option value="my">Burmese</option>
+                        <option value="km">Cambodian/Khmer</option>
+                        <option value="ca">Catalan</option>
+                        <option value="ch">Chamorro</option>
+                        <option value="ce">Chechen</option>
+                        <option value="ny">Chichewa</option>
+                        <option value="zh">Chinese</option>
+                        <option value="cv">Chuvash</option>
+                        <option value="kw">Cornish</option>
+                        <option value="co">Corsican</option>
+                        <option value="cr">Cree</option>
+                        <option value="hr">Croatian</option>
+                        <option value="cs">Czech</option>
+                        <option value="da">Danish</option>
+                        <option value="nl">Dutch</option>
+                        <option value="en" selected="selected">English</option>
+                        <option value="eo">Esperanto</option>
+                        <option value="et">Estonian</option>
+                        <option value="ee">Ewe</option>
+                        <option value="fo">Faroese</option>
+                        <option value="fj">Fiji</option>
+                        <option value="fi">Finnish</option>
+                        <option value="fr">French</option>
+                        <option value="fy">Frisian</option>
+                        <option value="ff">Fula</option>
+                        <option value="gl">Galician</option>
+                        <option value="lg">Ganda</option>
+                        <option value="ka">Georgian</option>
+                        <option value="de">German</option>
+                        <option value="el">Greek</option>
+                        <option value="kl">Greenlandic</option>
+                        <option value="gn">Guarani</option>
+                        <option value="gu">Gujarati</option>
+                        <option value="ht">Haitian</option>
+                        <option value="ha">Hausa</option>
+                        <option value="he">Hebrew</option>
+                        <option value="hz">Herero</option>
+                        <option value="hi">Hindi</option>
+                        <option value="ho">Hiri Motu</option>
+                        <option value="hu">Hungarian</option>
+                        <option value="is">Icelandic</option>
+                        <option value="io">Ido</option>
+                        <option value="ig">Igbo</option>
+                        <option value="dz">Indian Bhutani</option>
+                        <option value="id">Indonesian</option>
+                        <option value="ia">Interlingua</option>
+                        <option value="ie">Interlingue</option>
+                        <option value="iu">Inuktitut</option>
+                        <option value="ik">Inupiak</option>
+                        <option value="ga">Irish Gaelic</option>
+                        <option value="it">Italian</option>
+                        <option value="ja">Japanese</option>
+                        <option value="kn">Kannada</option>
+                        <option value="kr">Kanuri</option>
+                        <option value="ks">Kashmiri</option>
+                        <option value="kk">Kazakh</option>
+                        <option value="ki">Kikuyu</option>
+                        <option value="rw">Kinyarwanda</option>
+                        <option value="ky">Kirghiz</option>
+                        <option value="rn">Kirundi</option>
+                        <option value="kv">Komi</option>
+                        <option value="kg">Kongo</option>
+                        <option value="ko">Korean</option>
+                        <option value="ku">Kurdish</option>
+                        <option value="kj">Kwanyama</option>
+                        <option value="lo">Laotian</option>
+                        <option value="la">Latin</option>
+                        <option value="lv">Latvian</option>
+                        <option value="li">Limburgish</option>
+                        <option value="ln">Lingala</option>
+                        <option value="lt">Lithuanian</option>
+                        <option value="lu">Luba-Katanga</option>
+                        <option value="lb">Luxemburgish</option>
+                        <option value="mk">Macedonian</option>
+                        <option value="mg">Madagascarian</option>
+                        <option value="ms">Malay</option>
+                        <option value="ml">Malayalam</option>
+                        <option value="dv">Maldivian</option>
+                        <option value="mt">Maltese</option>
+                        <option value="gv">Manx Gaelic</option>
+                        <option value="mi">Maori</option>
+                        <option value="mr">Marathi</option>
+                        <option value="mh">Marshallese</option>
+                        <option value="mo">Moldavian</option>
+                        <option value="mn">Mongolian</option>
+                        <option value="na">Nauruan</option>
+                        <option value="nv">Navajo</option>
+                        <option value="nd">Ndebele (North)</option>
+                        <option value="nr">Ndebele (South)</option>
+                        <option value="ng">Ndonga</option>
+                        <option value="ne">Nepali</option>
+                        <option value="se">Northern Sámi</option>
+                        <option value="no">Norwegian</option>
+                        <option value="nb">Norwegian Bokmål</option>
+                        <option value="ii">Nuosu</option>
+                        <option value="nn">Nynorsk</option>
+                        <option value="oc">Occitan</option>
+                        <option value="oj">Ojibwe</option>
+                        <option value="cu">Old Church Slavonic</option>
+                        <option value="or">Oriya</option>
+                        <option value="om">Oromo</option>
+                        <option value="os">Ossetian</option>
+                        <option value="ps">Pashto</option>
+                        <option value="fa">Persian</option>
+                        <option value="pl">Polish</option>
+                        <option value="pt">Portuguese</option>
+                        <option value="pa">Punjabi</option>
+                        <option value="pi">Pāli</option>
+                        <option value="qu">Quechua</option>
+                        <option value="rm">Rhaeto-Romance</option>
+                        <option value="ro">Romanian</option>
+                        <option value="ru">Russian</option>
+                        <option value="sm">Samoan</option>
+                        <option value="sg">Sangho</option>
+                        <option value="sa">Sanskrit</option>
+                        <option value="sc">Sardinian</option>
+                        <option value="gd">Scottish Gaelic</option>
+                        <option value="sr">Serbian</option>
+                        <option value="sh">Serbo-Croatian</option>
+                        <option value="sn">Shona</option>
+                        <option value="sd">Sindhi</option>
+                        <option value="si">Singhalese</option>
+                        <option value="sk">Slovak</option>
+                        <option value="sl">Slovenian</option>
+                        <option value="so">Somali</option>
+                        <option value="st">Southern Sotho</option>
+                        <option value="es">Spanish</option>
+                        <option value="su">Sudanese</option>
+                        <option value="sw">Swahili</option>
+                        <option value="ss">Swati</option>
+                        <option value="sv">Swedish</option>
+                        <option value="tg">Tadjik</option>
+                        <option value="tl">Tagalog</option>
+                        <option value="ty">Tahitian</option>
+                        <option value="ta">Tamil</option>
+                        <option value="tt">Tatar</option>
+                        <option value="te">Telugu</option>
+                        <option value="th">Thai</option>
+                        <option value="bo">Tibetan</option>
+                        <option value="ti">Tigrinya</option>
+                        <option value="to">Tonga</option>
+                        <option value="ts">Tsonga</option>
+                        <option value="tn">Tswana</option>
+                        <option value="tr">Turkish</option>
+                        <option value="tk">Turkmen</option>
+                        <option value="tw">Twi</option>
+                        <option value="ug">Uigur</option>
+                        <option value="uk">Ukrainian</option>
+                        <option value="ur">Urdu</option>
+                        <option value="uz">Uzbek</option>
+                        <option value="ve">Venda</option>
+                        <option value="vi">Vietnamese</option>
+                        <option value="vk">Viking</option>
+                        <option value="vo">Volapük</option>
+                        <option value="wa">Walloon</option>
+                        <option value="cy">Welsh</option>
+                        <option value="wo">Wolof</option>
+                        <option value="xh">Xhosa</option>
+                        <option value="yi">Yiddish</option>
+                        <option value="yo">Yorouba</option>
+                        <option value="za">Zhuang</option>
+                        <option value="zu">Zulu</option>
+                        <option value="jv">basa Jawa</option>
+                    </select>
+                
+            
+        </div>
+      
+
+      
+
+    
+    
+                  
+                </fieldset>
+              
+              
+                <fieldset id="fieldset-dates" class="formPanel" style="display: none;">
+                  <legend id="fieldsetlegend-dates" style="display: none;">Dates</legend>
+                  
+                    
+      
+      
+        <div id="archetypes-fieldname-effectiveDate" data-uid="811793d984af4c2dbdf4db2080df1e27" data-fieldname="effectiveDate" class="field ArchetypesCalendarWidget  kssattr-atfieldname-effectiveDate">
+          <span></span>
+          
+          
+          
+          <div class="fieldErrorBox"></div>
+          
+          <div class="formQuestion label">
+              Publishing Date
+              
+              <span id="effectiveDate_help" class="formHelp">The date when the item will be published. If no date is selected the item will be published immediately.</span>
+          </div>
+          
+            <div class="plone_jscalendar">
+
+      <input type="hidden" id="edit_form_effectiveDate_0" name="effectiveDate" originalvalue="">
+      <input type="hidden" id="effectiveDate" originalvalue="">
+
+      
+
+      
+        <label for="edit_form_effectiveDate_0_year" style="float:left" class="hiddenStructure">Year</label>
+        <span>
+           <select size="1" id="edit_form_effectiveDate_0_year" name="effectiveDate_year">
+          <option selected="selected" value="0000">--</option>
+          <option value="2001">2001</option>
+          <option value="2002">2002</option>
+          <option value="2003">2003</option>
+          <option value="2004">2004</option>
+          <option value="2005">2005</option>
+          <option value="2006">2006</option>
+          <option value="2007">2007</option>
+          <option value="2008">2008</option>
+          <option value="2009">2009</option>
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
+          <option value="2012">2012</option>
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+
+          </select>
+        </span>
+
+        
+
+        <span>/</span>
+
+        <span>
+        <label for="edit_form_effectiveDate_0_month" style="float:left" class="hiddenStructure">Month</label>
+        <select size="1" id="edit_form_effectiveDate_0_month" name="effectiveDate_month">
+          <option selected="selected" value="00">--</option>
+          <option value="01">January</option>
+          <option value="02">February</option>
+          <option value="03">March</option>
+          <option value="04">April</option>
+          <option value="05">May</option>
+          <option value="06">June</option>
+          <option value="07">July</option>
+          <option value="08">August</option>
+          <option value="09">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+        </span>
+
+        <span>/</span>
+
+        <label for="edit_form_effectiveDate_0_day" style="float:left" class="hiddenStructure">Day</label>
+        <select size="1" id="edit_form_effectiveDate_0_day" name="effectiveDate_day">
+        
+            <option selected="selected" value="00">--</option>
+            <option value="01">1</option>
+            <option value="02">2</option>
+            <option value="03">3</option>
+            <option value="04">4</option>
+            <option value="05">5</option>
+            <option value="06">6</option>
+            <option value="07">7</option>
+            <option value="08">8</option>
+            <option value="09">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+        
+        </select>
+        <span id="edit_form_effectiveDate_0_popup" style="cursor: pointer;" class="plone-jscalendar-popup">
+          <input type="hidden" id="edit_form_effectiveDate_0_yearStart" value="0000" name="effectiveDate_yearStart" originalvalue="0000">
+          <input type="hidden" id="edit_form_effectiveDate_0_yearEnd" value="2017" name="effectiveDate_yearEnd" originalvalue="2017">
+          <img width="16" height="16" title="" alt="" src="http://127.0.0.1:8080/Plone/popup_calendar.png">
+        </span>
+
+      
+
+      &nbsp;
+      <span>
+        <label for="edit_form_effectiveDate_0_hour" style="float:left" class="hiddenStructure">Hour</label>
+          <select size="1" id="edit_form_effectiveDate_0_hour" name="effectiveDate_hour">
+
+              <option selected="selected" value="12">--</option>
+              <option value="12">12</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+
+          </select>
+      </span>
+
+      
+
+      <span>:</span>
+
+      <span>
+        <label for="edit_form_effectiveDate_0_minute" style="float:left" class="hiddenStructure">Minute</label>
+          <select size="1" id="edit_form_effectiveDate_0_minute" name="effectiveDate_minute">
+
+            <option selected="selected" value="00">--</option>
+            <option value="00">00</option>
+            <option value="05">05</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
+            <option value="45">45</option>
+            <option value="50">50</option>
+            <option value="55">55</option>
+
+         </select>
+      </span>
+
+      
+
+
+      <span>
+        <label for="edit_form_effectiveDate_0_ampm" style="float:left" class="hiddenStructure">AM/PM</label>
+        <select size="1" id="edit_form_effectiveDate_0_ampm" name="effectiveDate_ampm">
+
+          <option selected="selected" value="AM">--</option>
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+
+        </select>
+      </span>
+
+      
+    </div>
+          
+        
+        </div>
+      
+
+      
+
+    
+    
+                  
+                  
+                    
+      
+      
+        <div id="archetypes-fieldname-expirationDate" data-uid="811793d984af4c2dbdf4db2080df1e27" data-fieldname="expirationDate" class="field ArchetypesCalendarWidget  kssattr-atfieldname-expirationDate">
+          <span></span>
+          
+          
+          
+          <div class="fieldErrorBox"></div>
+          
+          <div class="formQuestion label">
+              Expiration Date
+              
+              <span id="expirationDate_help" class="formHelp">The date when the item expires. This will automatically make the item invisible for others at the given date. If no date is chosen, it will never expire.</span>
+          </div>
+          
+            <div class="plone_jscalendar">
+
+      <input type="hidden" id="edit_form_expirationDate_1" name="expirationDate" originalvalue="">
+      <input type="hidden" id="expirationDate" originalvalue="">
+
+      
+
+      
+        <label for="edit_form_expirationDate_1_year" style="float:left" class="hiddenStructure">Year</label>
+        <span>
+           <select size="1" id="edit_form_expirationDate_1_year" name="expirationDate_year">
+          <option selected="selected" value="0000">--</option>
+          <option value="2001">2001</option>
+          <option value="2002">2002</option>
+          <option value="2003">2003</option>
+          <option value="2004">2004</option>
+          <option value="2005">2005</option>
+          <option value="2006">2006</option>
+          <option value="2007">2007</option>
+          <option value="2008">2008</option>
+          <option value="2009">2009</option>
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
+          <option value="2012">2012</option>
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+
+          </select>
+        </span>
+
+        
+
+        <span>/</span>
+
+        <span>
+        <label for="edit_form_expirationDate_1_month" style="float:left" class="hiddenStructure">Month</label>
+        <select size="1" id="edit_form_expirationDate_1_month" name="expirationDate_month">
+          <option selected="selected" value="00">--</option>
+          <option value="01">January</option>
+          <option value="02">February</option>
+          <option value="03">March</option>
+          <option value="04">April</option>
+          <option value="05">May</option>
+          <option value="06">June</option>
+          <option value="07">July</option>
+          <option value="08">August</option>
+          <option value="09">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+        </span>
+
+        <span>/</span>
+
+        <label for="edit_form_expirationDate_1_day" style="float:left" class="hiddenStructure">Day</label>
+        <select size="1" id="edit_form_expirationDate_1_day" name="expirationDate_day">
+        
+            <option selected="selected" value="00">--</option>
+            <option value="01">1</option>
+            <option value="02">2</option>
+            <option value="03">3</option>
+            <option value="04">4</option>
+            <option value="05">5</option>
+            <option value="06">6</option>
+            <option value="07">7</option>
+            <option value="08">8</option>
+            <option value="09">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+        
+        </select>
+        <span id="edit_form_expirationDate_1_popup" style="cursor: pointer;" class="plone-jscalendar-popup">
+          <input type="hidden" id="edit_form_expirationDate_1_yearStart" value="0000" name="expirationDate_yearStart" originalvalue="0000">
+          <input type="hidden" id="edit_form_expirationDate_1_yearEnd" value="2017" name="expirationDate_yearEnd" originalvalue="2017">
+          <img width="16" height="16" title="" alt="" src="http://127.0.0.1:8080/Plone/popup_calendar.png">
+        </span>
+
+      
+
+      &nbsp;
+      <span>
+        <label for="edit_form_expirationDate_1_hour" style="float:left" class="hiddenStructure">Hour</label>
+          <select size="1" id="edit_form_expirationDate_1_hour" name="expirationDate_hour">
+
+              <option selected="selected" value="12">--</option>
+              <option value="12">12</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+
+          </select>
+      </span>
+
+      
+
+      <span>:</span>
+
+      <span>
+        <label for="edit_form_expirationDate_1_minute" style="float:left" class="hiddenStructure">Minute</label>
+          <select size="1" id="edit_form_expirationDate_1_minute" name="expirationDate_minute">
+
+            <option selected="selected" value="00">--</option>
+            <option value="00">00</option>
+            <option value="05">05</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
+            <option value="45">45</option>
+            <option value="50">50</option>
+            <option value="55">55</option>
+
+         </select>
+      </span>
+
+      
+
+
+      <span>
+        <label for="edit_form_expirationDate_1_ampm" style="float:left" class="hiddenStructure">AM/PM</label>
+        <select size="1" id="edit_form_expirationDate_1_ampm" name="expirationDate_ampm">
+
+          <option selected="selected" value="AM">--</option>
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+
+        </select>
+      </span>
+
+      
+    </div>
+          
+        
+        </div>
+      
+
+      
+
+    
+    
+                  
+                </fieldset>
+              
+              
+                <fieldset id="fieldset-ownership" class="formPanel" style="display: none;">
+                  <legend id="fieldsetlegend-ownership" style="display: none;">Ownership</legend>
+                  
+                    <div>
+      
+      
+        <div id="archetypes-fieldname-creators" data-uid="811793d984af4c2dbdf4db2080df1e27" data-fieldname="creators" class="field ArchetypesLinesWidget  kssattr-atfieldname-creators">
+          <span></span>
+          
+          
+            <label for="creators" class="formQuestion">
+                Creators
+                
+                <span id="creators_help" class="formHelp">Persons responsible for creating the content of this item. Please enter a list of user names, one per line. The principal creator should come first.</span>
+            </label>
+          
+          
+          <div class="fieldErrorBox"></div>
+          <div>
+              <textarea id="creators" name="creators:lines" cols="40" rows="3">admin</textarea>
+          </div>
+        </div>
+      
+
+      
+
+    
+    </div>
+                  
+                  
+                    <div>
+      
+      
+        <div id="archetypes-fieldname-contributors" data-uid="811793d984af4c2dbdf4db2080df1e27" data-fieldname="contributors" class="field ArchetypesLinesWidget  kssattr-atfieldname-contributors">
+          <span></span>
+          
+          
+            <label for="contributors" class="formQuestion">
+                Contributors
+                
+                <span id="contributors_help" class="formHelp">The names of people that have contributed to this item. Each contributor should be on a separate line.</span>
+            </label>
+          
+          
+          <div class="fieldErrorBox"></div>
+          <div>
+              <textarea id="contributors" name="contributors:lines" cols="40" rows="5"></textarea>
+          </div>
+        </div>
+      
+
+      
+
+    
+    </div>
+                  
+                  
+                    
+      
+      
+        <div id="archetypes-fieldname-rights" data-uid="811793d984af4c2dbdf4db2080df1e27" data-fieldname="rights" class="field ArchetypesTextAreaWidget  kssattr-atfieldname-rights">
+          <span></span>
+          
+          
+            <label for="rights" class="formQuestion">
+                Rights
+                
+                <span id="rights_help" class="formHelp">Copyright statement or other rights information on this item.</span>
+            </label>
+          
+          
+          <div class="fieldErrorBox"></div>
+          
+          
+      
+
+        <textarea id="rights" cols="40" name="rights" rows="5" class="blurrable firstToFocus"></textarea>
+
+            
+
+            
+
+      
+    
+          
+      
+
+        
+        
+          <input type="hidden" value="text/plain" name="rights_text_format" originalvalue="text/plain">
+        
+      
+    
+        
+        </div>
+      
+
+      
+
+    
+    
+                  
+                </fieldset>
+              
+              
+                <fieldset id="fieldset-settings" class="formPanel" style="display: none;">
+                  <legend id="fieldsetlegend-settings" style="display: none;">Settings</legend>
+                  
+                    
+      
+      
+        <div id="archetypes-fieldname-allowDiscussion" data-uid="811793d984af4c2dbdf4db2080df1e27" data-fieldname="allowDiscussion" class="field ArchetypesBooleanWidget  kssattr-atfieldname-allowDiscussion">
+          
+
+        <input type="checkbox" id="allowDiscussion" name="allowDiscussion:boolean" value="on" class="noborder" originalvalue="on">
+        <input type="hidden" name="allowDiscussion:boolean:default" value="" originalvalue="">
+      
+          
+          
+            <label for="allowDiscussion" class="formQuestion">
+                Allow comments
+                
+                <span id="allowDiscussion_help" class="formHelp">If selected, users can add comments to this item.</span>
+            </label>
+          
+          
+          <div class="fieldErrorBox"></div>
+          <div></div>
+        </div>
+      
+
+      
+
+    
+    
+                  
+                  
+                    
+      
+      
+        <div id="archetypes-fieldname-excludeFromNav" data-uid="811793d984af4c2dbdf4db2080df1e27" data-fieldname="excludeFromNav" class="field ArchetypesBooleanWidget  kssattr-atfieldname-excludeFromNav">
+          
+
+        <input type="checkbox" id="excludeFromNav" name="excludeFromNav:boolean" value="on" class="noborder" originalvalue="on">
+        <input type="hidden" name="excludeFromNav:boolean:default" value="" originalvalue="">
+      
+          
+          
+            <label for="excludeFromNav" class="formQuestion">
+                Exclude from navigation
+                
+                <span id="excludeFromNav_help" class="formHelp">If selected, this item will not appear in the navigation tree</span>
+            </label>
+          
+          
+          <div class="fieldErrorBox"></div>
+          <div></div>
+        </div>
+      
+
+      
+
+    
+    
+                  
+                  
+                    
+      
+      
+        <div id="archetypes-fieldname-presentation" data-uid="811793d984af4c2dbdf4db2080df1e27" data-fieldname="presentation" class="field ArchetypesBooleanWidget  kssattr-atfieldname-presentation">
+          
+
+        <input type="checkbox" id="presentation" name="presentation:boolean" checked="checked" value="on" class="noborder" originalvalue="on">
+        <input type="hidden" name="presentation:boolean:default" value="" originalvalue="">
+      
+          
+          
+            <label for="presentation" class="formQuestion">
+                Presentation mode
+                
+                <span id="presentation_help" class="formHelp">If selected, this will give users the ability to view the contents as presentation slides.</span>
+            </label>
+          
+          
+          <div class="fieldErrorBox"></div>
+          <div></div>
+        </div>
+      
+
+      
+
+    
+    
+                  
+                  
+                    
+      
+      
+        <div id="archetypes-fieldname-tableContents" data-uid="811793d984af4c2dbdf4db2080df1e27" data-fieldname="tableContents" class="field ArchetypesBooleanWidget  kssattr-atfieldname-tableContents">
+          
+
+        <input type="checkbox" id="tableContents" name="tableContents:boolean" value="on" class="noborder" originalvalue="on">
+        <input type="hidden" name="tableContents:boolean:default" value="" originalvalue="">
+      
+          
+          
+            <label for="tableContents" class="formQuestion">
+                Table of contents
+                
+                <span id="tableContents_help" class="formHelp">If selected, this will show a table of contents at the top of the page.</span>
+            </label>
+          
+          
+          <div class="fieldErrorBox"></div>
+          <div></div>
+        </div>
+      
+
+      
+
+    
+    
+                  
+                </fieldset>
+              
+            
+            
+          
+
+          
+    
+
+    
+
+    <div id="cmfeditions_version_comment_block" class="field editionComment">
+
+        <label for="cmfeditions_version_comment">Change note</label>
+        <div id="cmfeditions_version_comment_help" class="formHelp">
+            Enter a comment that describes the changes you made.
+        </div>
+
+        <input type="text" size="40" id="cmfeditions_version_comment" name="cmfeditions_version_comment">
+    </div>
+
+
+
+          
+
+          <div class="formControls">
+	    
+              <input type="hidden" value="default" name="fieldsets:list" originalvalue="default">
+	    
+	    
+              <input type="hidden" value="categorization" name="fieldsets:list" originalvalue="categorization">
+	    
+	    
+              <input type="hidden" value="dates" name="fieldsets:list" originalvalue="dates">
+	    
+	    
+              <input type="hidden" value="ownership" name="fieldsets:list" originalvalue="ownership">
+	    
+	    
+              <input type="hidden" value="settings" name="fieldsets:list" originalvalue="settings">
+	    
+
+	    
+
+	
+            <input type="hidden" value="1" name="form.submitted" originalvalue="1">
+            <input type="hidden" value="" name="add_reference.field:record" originalvalue="">
+            <input type="hidden" value="" name="add_reference.type:record" originalvalue="">
+            <input type="hidden" value="" name="add_reference.destination:record" originalvalue="">
+
+            
+              
+                
+              
+              
+                
+              
+              
+                
+              
+            
+
+            
+
+            
+
+            
+            <input type="hidden" value="http://127.0.0.1:8080/Plone/" name="last_referer" originalvalue="http://127.0.0.1:8080/Plone/">
+
+            
+
+                
+                
+                <input type="submit" value="Save" name="form.button.save" class="context">
+                <input type="submit" value="Cancel" name="form.button.cancel" class="standalone">
+            
+
+            
+
+          </div>
+
+      </form>
+
+    </div>
+        
+    
+      
+    
+                        </div>
+                    
+
+                    
+                </div>
+            
+
+            <div id="viewlet-below-content">
+</div>
+        </div>
+
+    </div>
+
+    <div id="portal-footer-wrapper" class="row">
+        <div class="cell width-full position-0">
+            <div id="portal-footer">
+                <p>
+                    The
+                    <a href="http://plone.org">
+                        Plone <sup>&reg;</sup>
+                        Open Source CMS/WCM
+                    </a>
+                    is <abbr title="Copyright">&copy;</abbr>
+                    2000-2012
+               by the
+                    <a href="http://plone.org/foundation">Plone Foundation</a>
+                    and friends.
+               
+
+               
+               Distributed under the
+                    <a href="http://creativecommons.org/licenses/GPL/2.0/">GNU GPL license</a>
+                    .
+                </p>
+
+            </div>
+
+            <div id="portal-colophon">
+
+                <div class="colophonWrapper">
+                    <ul>
+                        <li>
+                            <a href="http://plone.org" title="This site was built using the Plone Open Source CMS/WCM.">Powered by Plone &amp; Python</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <ul id="portal-siteactions">
+
+                <li id="siteaction-sitemap">
+                    <a href="sitemap/index.html" accesskey="3" title="Site Map">Site Map</a>
+                </li>
+                <li id="siteaction-accessibility">
+                    <a href="accessibility-info/index.html" accesskey="0" title="Accessibility">Accessibility</a>
+                </li>
+                <li id="siteaction-contact">
+                    <a href="contact-info/index.html" accesskey="9" title="Contact">Contact</a>
+                </li>
+            </ul>
+
+            <div id="kss-spinner">
+                <img alt="" src="spinner.gif" />
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+
+<!-- Localized -->
