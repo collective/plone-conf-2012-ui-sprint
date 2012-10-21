@@ -70,8 +70,7 @@ ContentFinder.prototype.listdir = function(path) {
             e.preventDefault();
             e.stopPropagation();
             self.listdir($(this).attr('data-url'));
-        },
-        200
+        }
     );
 
     // breadcrumbs
