@@ -52,10 +52,10 @@ var finderdata = {
         ]
     },
     "http://localhost:8080/Plone/news": {
-        "parent_url": "http://plone.org",
+        "parent_url": "http://localhost:8080/Plone",
         "path": [
-            {"url": "/plone.org", "title": "Plone CMS: Open Source Content Management"},
-            {"url": "http://plone.org/news",
+            {"url": "http://localhost:8080/Plone", "title": "Home"},
+            {"url": "http://localhost:8080/Plone/news",
 "title": "News"}
         ],
         "upload_allowed": false,
@@ -63,7 +63,7 @@ var finderdata = {
             {
             "uid": "0306b0bd09895492a7b05ca0998959d2",
             "title": "Plone passes the 100.000 download mark",
-            "url": "http://plone.org/news/100k-downloads",
+            "url": "http://localhost:8080/Plone/news/100k-downloads",
             "is_folderish": false, "portal_type": "News Item",
             "icon": "",
             "id": "100k-downloads",
@@ -72,7 +72,7 @@ var finderdata = {
             {
             "uid": "87d6ab60c67c02336fc26a5cabe9af3d",
             "title": "Plone is 1 year old",
-            "url": "http://plone.org/news/1yearold",
+            "url": "http://localhost:8080/Plone/news/1yearold",
             "is_folderish": false, "portal_type": "News Item",
             "icon": "",
             "id": "1yearold",
@@ -81,7 +81,7 @@ var finderdata = {
             {
             "uid": "52c5b15d54a943e53280c039022a193f",
             "title": "Plone 2.0.4 Released",
-            "url": "http://plone.org/news/2.0.4",
+            "url": "http://localhost:8080/Plone/news/2.0.4",
             "is_folderish": false, "portal_type": "News Item",
             "icon": "",
             "id": "2.0.4",
@@ -90,7 +90,7 @@ var finderdata = {
             {
             "uid": "db29c7a8e22fe0799b8517be7a2cc044",
             "title": "Planned plone.org outage",
-            "url": "http://plone.org/news/20050219-outage",
+            "url": "http://localhost:8080/Plone/news/20050219-outage",
             "is_folderish": false, "portal_type": "News Item",
             "icon": "",
             "id": "20050219-outage",
@@ -99,7 +99,7 @@ var finderdata = {
             {
             "uid": "cddef9bdb91c9e25d4ca4e8b1da51112",
             "title": "2010 Plone Help Channel Superstar Awards",
-            "url": "http://plone.org/news/2010-plone-help-channel-superstar-awards",
+            "url": "http://localhost:8080/Plone/news/2010-plone-help-channel-superstar-awards",
             "is_folderish": false, "portal_type": "News Item",
             "icon": "",
             "id": "2010-plone-help-channel-superstar-awards",
@@ -108,7 +108,7 @@ var finderdata = {
             {
             "uid": "f657ab65fed073c94b29cdd07208c71c",
             "title": "2010 Plone Help Channel Superstars Results",
-            "url": "http://plone.org/news/2010-plone-irc-superstars-results",
+            "url": "http://localhost:8080/Plone/news/2010-plone-irc-superstars-results",
             "is_folderish": false, "portal_type": "News Item",
             "icon": "",
             "id": "2010-plone-irc-superstars-results",
@@ -117,7 +117,7 @@ var finderdata = {
             {
             "uid": "bed770fcfab569ccc7f342562f14bf11",
             "title": "Plone Foundation Board for 2011-2012 Elected",
-            "url": "http://plone.org/news/2011-2012-foundation-board",
+            "url": "http://localhost:8080/Plone/news/2011-2012-foundation-board",
             "is_folderish": false, "portal_type": "News Item",
             "icon": "",
             "id": "2011-2012-foundation-board",
@@ -125,7 +125,7 @@ var finderdata = {
             {
             "uid": "0ab1a93517d3ea8238c5e2aaa9664d83",
             "title": "2011 Plone Conference Adopts Anti-Harassment Policy",
-            "url": "http://plone.org/news/2011PloneConferenceAnti-HarassmentPolicy",
+            "url": "http://localhost:8080/Plone/news/2011PloneConferenceAnti-HarassmentPolicy",
             "is_folderish": false, "portal_type": "News Item",
             "icon": "",
             "id": "2011PloneConferenceAnti-HarassmentPolicy",
@@ -134,7 +134,7 @@ var finderdata = {
             {
             "uid": "f0228e9e2f50ecf933440f1756c3180a",
             "title": "San Francisco to Host 2011 Plone Conference",
-            "url": "http://plone.org/news/2011PloneConferenceResults",
+            "url": "http://localhost:8080/Plone/news/2011PloneConferenceResults",
             "is_folderish": false, "portal_type": "News Item",
             "icon": "",
             "id": "2011PloneConferenceResults",
@@ -143,7 +143,7 @@ var finderdata = {
             {
             "uid": "4c1b79524125564e400c87031b157b6e",
             "title": "2011 Plone Conference Has Sold 100 Tickets",
-            "url": "http://plone.org/news/2011ploneconf100tickets",
+            "url": "http://localhost:8080/Plone/news/2011ploneconf100tickets",
             "is_folderish": false, "portal_type": "News Item",
             "icon": "",
             "id": "2011ploneconf100tickets",
@@ -152,7 +152,7 @@ var finderdata = {
             {
             "uid": "42bf0c15cf5bfa29aec59938b13816d5",
             "title": "Plone Foundation Begins Search for Plone Conference 2011 Venue",
-            "url": "http://plone.org/news/2011ploneconfcallforproposals",
+            "url": "http://localhost:8080/Plone/news/2011ploneconfcallforproposals",
             "is_folderish": false, "portal_type": "News Item",
             "icon": "",
             "id": "2011ploneconfcallforproposals",
@@ -161,7 +161,7 @@ var finderdata = {
             {
             "uid": "8441a630f46fb0a2b714ac76a58a4f60",
             "title": "2011 Plone Conference Now Accepting Talk Submissions",
-            "url": "http://plone.org/news/2011ploneconfcallfortalks",
+            "url": "http://localhost:8080/Plone/news/2011ploneconfcallfortalks",
             "is_folderish": false, "portal_type": "News Item",
             "icon": "",
             "id": "2011ploneconfcallfortalks",
@@ -170,7 +170,7 @@ var finderdata = {
             {
             "uid": "34b5b7cf0fda4f6a9ae18da5d348771a",
             "title": "Plone Foundation announces Plone Conference 2013 selection process",
-            "url": "http://plone.org/news/2013ploneconf",
+            "url": "http://localhost:8080/Plone/news/2013ploneconf",
             "is_folderish": false, "portal_type": "News Item",
             "icon": "",
             "id": "2013ploneconf",
@@ -179,7 +179,7 @@ var finderdata = {
             {
             "uid": "878aa250543011d123775e6705347213",
             "title": "29 contributions sponsored by Google",
-            "url": "http://plone.org/news/29-contributions-sponsored-by-google",
+            "url": "http://localhost:8080/Plone/news/29-contributions-sponsored-by-google",
             "is_folderish": false, "portal_type": "News Item",
             "icon": "",
             "id": "29-contributions-sponsored-by-google",
@@ -188,14 +188,14 @@ var finderdata = {
         ]
     },
     "http://localhost:8080/Plone/events": {
-        "parent_url": "http://plone.org",
+        "parent_url": "http://localhost:8080/Plone",
         "path": [
             {
-            "url": "/plone.org",
-            "title": "Plone CMS: Open Source Content Management"
+            "url": "http://localhost:8080/Plone",
+            "title": "Home"
             },
             {
-            "url": "http://plone.org/events",
+            "url": "http://localhost:8080/Plone/events",
             "title": "Events"}
             ],
         "upload_allowed": false,
@@ -203,7 +203,7 @@ var finderdata = {
             {
             "uid": "eb9480a74c375da85abada276b4dcf0c",
             "title": "Community Events",
-            "url": "http://plone.org/events/community",
+            "url": "http://localhost:8080/Plone/events/community",
             "is_folderish": true, "portal_type": "Folder",
             "icon": "",
             "id": "community",
@@ -212,7 +212,7 @@ var finderdata = {
             {
             "uid": "d7695d3bc0197473922c459ce817ed46",
             "title": "Training Announcements",
-            "url": "http://plone.org/events/training",
+            "url": "http://localhost:8080/Plone/events/training",
             "is_folderish": true, "portal_type": "Topic",
             "icon": "",
             "id": "training",
@@ -221,7 +221,7 @@ var finderdata = {
             {
             "uid": "5c7dd4fc577caedda65aaaca87ff139a",
             "title": "Conferences",
-            "url": "http://plone.org/events/conferences",
+            "url": "http://localhost:8080/Plone/events/conferences",
             "is_folderish": true, "portal_type": "Folder",
             "icon": "",
             "id": "conferences",
@@ -230,7 +230,7 @@ var finderdata = {
             {
             "uid": "63b2efc00770f6de73848416ae6ffba2",
             "title": "Regional Symposia",
-            "url": "http://plone.org/events/regional",
+            "url": "http://localhost:8080/Plone/events/regional",
             "is_folderish": true, "portal_type": "Folder",
             "icon": "",
             "id": "regional",
@@ -239,7 +239,7 @@ var finderdata = {
             {
             "uid": "12810441087e4bece063db9a1f1c0b5a",
             "title": "Sprints",
-            "url": "http://plone.org/events/sprints",
+            "url": "http://localhost:8080/Plone/events/sprints",
             "is_folderish": true, "portal_type": "Folder",
             "icon": "",
             "id": "sprints",
@@ -248,7 +248,7 @@ var finderdata = {
             {
             "uid": "5551a55592d3ca3124582da34331edcc",
             "title": "Summer of Code",
-            "url": "http://plone.org/events/summer-of-code",
+            "url": "http://localhost:8080/Plone/events/summer-of-code",
             "is_folderish": true, "portal_type": "Folder",
             "icon": "",
             "id": "summer-of-code",
@@ -257,7 +257,7 @@ var finderdata = {
             {
             "uid": "a9207ea9e517be3e92482a86d483e121",
             "title": "World Plone Day",
-            "url": "http://plone.org/events/wpd",
+            "url": "http://localhost:8080/Plone/events/wpd",
             "is_folderish": true, "portal_type": "Folder",
             "icon": "",
             "id": "wpd",
@@ -266,7 +266,7 @@ var finderdata = {
             {
             "uid": "91b9c13e4ed305a08470db6ea31fad2d",
             "title": "Plone Tune-Up",
-            "url": "http://plone.org/events/tuneup.jpg",
+            "url": "http://localhost:8080/Plone/events/tuneup.jpg",
             "is_folderish": false, "portal_type": "Image",
             "icon": "image.png",
             "id": "tuneup.jpg",
@@ -275,7 +275,7 @@ var finderdata = {
             {
             "uid": "82455803dae603f842a953c72da614c1",
             "title": "Plone Tune-Ups",
-            "url": "http://plone.org/events/plone-tuneups",
+            "url": "http://localhost:8080/Plone/events/plone-tuneups",
             "is_folderish": true, "portal_type": "Folder",
             "icon": "",
             "id": "plone-tuneups",
@@ -284,7 +284,7 @@ var finderdata = {
             {
             "uid": "8d597a41b46c36dfa63c28010fb632d8",
             "title": "Plone Strategic Planning Summit 2008",
-            "url": "http://plone.org/events/2008-summit",
+            "url": "http://localhost:8080/Plone/events/2008-summit",
             "is_folderish": true, "portal_type": "Folder",
             "icon": "",
             "id": "2008-summit",
@@ -293,7 +293,7 @@ var finderdata = {
             {
             "uid": "7d09a2c25a840b0b9798383947611466",
             "title": "50th Plone Tune-Up Tshirt",
-            "url": "http://plone.org/events/50th-plone-tuneup-tshirt",
+            "url": "http://localhost:8080/Plone/events/50th-plone-tuneup-tshirt",
             "is_folderish": false, "portal_type": "Image",
             "icon": "png.png",
             "id": "50th-plone-tuneup-tshirt",

@@ -27,7 +27,8 @@ ContentFinder.prototype.listdir = function(path) {
     console.log(path);
     var self = this;
     var html = [];
-    var items = finderdata[path].items;
+    var data = finderdata[path];
+    var items = data.items;
     for (var i=0; i<items.length; i++) {
         var item = items[i];
         var folderish = item.is_folderish ? ' folderish ' : '';
@@ -51,6 +52,31 @@ ContentFinder.prototype.listdir = function(path) {
             e.preventDefault();
             e.stopPropagation();
             self.listdir($(this).attr('data-url'));
+        });
+
+    // breadcrumbs
+    html = [];
+    len = data.path.length;
+    $.each(data.path, function (i, item) {
+        if (i > 0) {
+            html.push(" / ");
+        }
+        html.push(item.icon);
+        if (i === len - 1) {
+            html.push('<span>' + item.title + '</span>');
+        } else {
+            html.push('<a href="' + item.url + '">' + item.title + '</a>');
+        }
+    });
+    $('.internalpath', this.container).html(html.join(''));
+
+    // breadcrumb link
+    $('.internalpath a', this.container)
+        .unbind('.finderpath')
+        .bind('click.finderpath', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            self.listdir($(this).attr('href'));
         });
 
 }
