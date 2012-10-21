@@ -1,14 +1,15 @@
 var ContentFinder = function(id, path, multiselect) {
     var self = this;
-    this.id = id;
-    this.container = $(id);
-    this.multiselect = multiselect;
-    this.selecteditems = [];
-    this.dropdown = $('.chzn-drop', this.container);
-    this.results = $('.chzn-results', this.container);
-    this.input = $('.search-field input', this.container);
-    this.input.attr('value', this.input.attr('data-placeholder'));
-    $(this.input).toggle(function() {
+    self.id = id;
+    self.container = $(id);
+    self.multiselect = multiselect;
+    self.selecteditems = [];
+    self.choices = $('.chzn-choices', self.container);
+    self.dropdown = $('.chzn-drop', self.container);
+    self.results = $('.chzn-results', self.container);
+    self.input = $('.search-field input', self.container);
+    self.input.attr('value', self.input.attr('data-placeholder'));
+    $(self.input).toggle(function() {
         if (self.input.attr('value') == self.input.attr('data-placeholder')) {
             self.input.attr('value', '');
         };
@@ -19,7 +20,7 @@ var ContentFinder = function(id, path, multiselect) {
         };
         self.dropdown.css({'left': -9000});
     });
-    this.current_path = path;
+    self.current_path = path;
 };
 
 ContentFinder.prototype.listdir = function(path) {
@@ -69,8 +70,17 @@ ContentFinder.prototype.select_item = function(item) {
             self.selecteditems.push(item);
             item.toggleClass('selected');
         }
-        console.log(self.selecteditems);
     }
+
+    // add selections to search input
+    html = []
+    for (var i=0; i < this.selecteditems.length; i++) {
+        var item = this.selecteditems[i];
+        html.push('<li class="search-choice"><span>' + item.text() + '</span><a href="javascript:void(0)" class="search-choice-close" rel="3" data-uid="' + item.attr('data-uid') + '"></a></li>');
+    }
+    html.push('<li class="search-field"><input type="text" style="width: 172px;" autocomplete="off" class="default" data-placeholder="Click to search or browse"></li>');
+    self.choices.html(html.join(''));
+
 };
 
 
