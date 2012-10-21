@@ -31,6 +31,9 @@
   display: block;
   padding: 5px 6px;
 }
+#content .chzn-results li.active-result:hover { 
+    cursor: pointer; background-color: #EEE;
+}
 /* @end */
 
 /* @group Single Chosen */
