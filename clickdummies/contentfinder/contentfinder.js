@@ -45,27 +45,39 @@ ContentFinder.prototype.listdir = function(path) {
 
 ContentFinder.prototype.select_item = function(item) {
     var self = this;
-    // remove previously selected items from the list
-    var new_selecteditems = [];
-    for (var i=0; i<self.selecteditems.length; i++) {
-        var selected = self.selecteditems[i]; 
-        if (selected.attr('data-uid') != item.attr('data-uid')) {
-            new_selecteditems.push(selected);
-            if (selected.hasClass('selected')) {
-                selected.toggleClass('selected');
-            }
+    if (!self.multiselect) {
+        var selected = self.selecteditems[0];
+        if (selected != undefined && item != selected) {
+            selected.toggleClass('selected');
         }
+        self.selecteditems = [item];
+        item.toggleClass('selected');
+    } else {
+        // remove item from list if it was deselected
+        if (item.hasClass('selected')) {
+            var new_lst = []
+            for (var i=0; i<self.selecteditems.length; i++) {
+                var selected = self.selecteditems[i];
+                if (selected.attr('data-uid') == item.attr('data-uid')) {
+                    selected.toggleClass('selected');
+                } else {
+                    new_lst.push(selected);
+                }
+            }
+            self.selecteditems = new_lst;
+        } else {
+            self.selecteditems.push(item);
+            item.toggleClass('selected');
+        }
+        console.log(self.selecteditems);
     }
-    new_selecteditems.push(item);
-    item.toggleClass('selected');
-    self.selecteditems = new_selecteditems;
 };
 
 
 $(document).ready(function () {
     $('.finder').each(function() {
         var url = $(this).attr('data-url');
-        var finder = new ContentFinder('#'+$(this).attr('id'), url);
+        var finder = new ContentFinder('#'+$(this).attr('id'), url, true);
         finder.listdir(url);
     });
 });
