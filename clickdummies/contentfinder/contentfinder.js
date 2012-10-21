@@ -24,13 +24,15 @@ var ContentFinder = function(id, path, multiselect) {
 };
 
 ContentFinder.prototype.listdir = function(path) {
+    console.log(path);
     var self = this;
     var html = [];
     var items = finderdata[path].items;
     for (var i=0; i<items.length; i++) {
         var item = items[i];
+        var folderish = item.is_folderish ? ' folderish ' : '';
         $.merge(html, [
-            '<li class="active-result" data-url="' + item.url + '" data-uid="' + item.uid + '">',
+            '<li class="active-result' + folderish + '" data-url="' + item.url + '" data-uid="' + item.uid + '">',
             '<span class="contenttype-' + item.normalized_type + '">' + item.title + '</span>',
             '</li>'
             ]
@@ -42,6 +44,15 @@ ContentFinder.prototype.listdir = function(path) {
         .bind('click.finderresult', function() {
             self.select_item($(this))
             });
+
+    $('li.folderish', document)
+        .unbind('.finderdblclick')
+        .bind('dblclick.finderdblclick', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            self.listdir($(this).attr('data-url'));
+        });
+
 }
 
 ContentFinder.prototype.select_item = function(item) {
