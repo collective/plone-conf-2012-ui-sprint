@@ -3,7 +3,7 @@ var ContentFinder = function(id, path, multiselect) {
     self.id = id;
     self.container = $(id);
     self.multiselect = multiselect;
-    self.selecteditems = [];
+    self.selecteditems = []
     self.choices = $('.chzn-choices', self.container);
     self.dropdown = $('.chzn-drop', self.container);
     self.results = $('.chzn-results', self.container);
@@ -23,6 +23,15 @@ var ContentFinder = function(id, path, multiselect) {
     self.current_path = path;
 };
 
+ContentFinder.prototype.selected_uids = function() {
+    var uids = []
+    for (var i=0; i<this.selecteditems.length; i++) {
+        var selected = this.selecteditems[i];
+        uids.push(selected.attr('data-uid'));
+    }
+    return uids;
+}
+
 ContentFinder.prototype.listdir = function(path) {
     console.log(path);
     var self = this;
@@ -32,8 +41,10 @@ ContentFinder.prototype.listdir = function(path) {
     for (var i=0; i<items.length; i++) {
         var item = items[i];
         var folderish = item.is_folderish ? ' folderish ' : '';
+        var selected = $.inArray(item.uid, self.selected_uids()) != -1;
+        var selected_class = selected ? ' selected ' : '';
         $.merge(html, [
-            '<li class="active-result' + folderish + '" data-url="' + item.url + '" data-uid="' + item.uid + '">',
+            '<li class="active-result' + folderish + selected_class + '" data-url="' + item.url + '" data-uid="' + item.uid + '">',
             '<span class="contenttype-' + item.normalized_type + '">' + item.title + '</span>',
             '</li>'
             ]
