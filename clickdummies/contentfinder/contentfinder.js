@@ -9,7 +9,7 @@ var ContentFinder = function(id, path, multiselect) {
     self.results = $('.chzn-results', self.container);
     self.input = $('.search-field input', self.container);
     self.input.attr('value', self.input.attr('data-placeholder'));
-    $(self.choices).toggle(function() {
+    $(self.input).toggle(function() {
         if (self.input.attr('value') == self.input.attr('data-placeholder')) {
             self.input.attr('value', '');
         };
