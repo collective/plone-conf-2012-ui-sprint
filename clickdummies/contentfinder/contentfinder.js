@@ -40,7 +40,7 @@ ContentFinder.prototype.listdir = function(path) {
     var items = data.items;
     for (var i=0; i<items.length; i++) {
         var item = items[i];
-        var folderish = item.is_folderish ? ' folderish ' : '';
+        var folderish = item.is_folderish ? ' folderish ' : ' not-folderish ';
         var selected = $.inArray(item.uid, self.selected_uids()) != -1;
         var selected_class = selected ? ' selected ' : '';
         $.merge(html, [
@@ -51,19 +51,23 @@ ContentFinder.prototype.listdir = function(path) {
         )
     }
     this.results.html(html.join(''));
-    $('li', this.results)
+    $('li.not-folderish', this.results)
         .unbind('.finderresult')
         .bind('click.finderresult', function() {
             self.select_item($(this))
             });
 
-    $('li.folderish', document)
-        .unbind('.finderdblclick')
-        .bind('dblclick.finderdblclick', function(e) {
+    $('li.folderish', this.container).single_double_click(
+        function() {
+            self.select_item($(this));
+        },
+        function(e) {
             e.preventDefault();
             e.stopPropagation();
             self.listdir($(this).attr('data-url'));
-        });
+        },
+        200
+    );
 
     // breadcrumbs
     html = [];
