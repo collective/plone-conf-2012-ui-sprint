@@ -11,7 +11,20 @@ var ContentFinder = function(id, path, multiselect) {
     self.results = $('.chzn-results', self.container);
     self.input = $('.search-field input', self.container);
     self.input.attr('value', self.input.attr('data-placeholder'));
-    $(self.choices).toggle(function(e) {
+    self.click_test_action = function(evt) {
+        return self.test_active_click(evt);
+    };
+    $(document).click(self.click_test_action);
+
+    self.test_active_click = function(evt) {
+        if ($(evt.target).parents(self.id).length) {
+            return this.active_field = true;
+        } else {
+            self.dropdown.css({'left': -9000});
+        }
+    };
+
+    var open_dropdown = function(e) {
         tagName = $(e.target).prop('tagName');
         if (tagName == 'UL' || tagName == 'INPUT') {
             if (self.input.attr('value') == self.input.attr('data-placeholder')) {
@@ -19,7 +32,8 @@ var ContentFinder = function(id, path, multiselect) {
             };
             self.dropdown.css({'left': 0});
         }
-    }, function(e) {
+    };
+    var close_dropdown = function(e) {
         tagName = $(e.target).prop('tagName');
         if (tagName == 'UL' || tagName == 'INPUT') {
             if (self.input.attr('value') == '') {
@@ -27,7 +41,8 @@ var ContentFinder = function(id, path, multiselect) {
             };
             self.dropdown.css({'left': -9000});
         }
-    });
+    }
+    self.choices.toggle(open_dropdown, close_dropdown);
     self.current_path = path;
 };
 
