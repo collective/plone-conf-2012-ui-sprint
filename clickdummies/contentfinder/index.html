@@ -23,13 +23,17 @@
 <script src="jquery.single_double_click.js" type="text/javascript"></script>
 <script src="contentfinder.js" type="text/javascript"></script>
 <script src="finderdata.js" type="text/javascript"></script>
+<script src="chosen/jqueryui-sorting.js" type="text/javascript"></script>
 <script src="chosen/chosen.jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function() {
-    $(".chzn-select").chosen();
-    $(".chzn-select-deselect").chosen({allow_single_deselect:true});
-    }
-)
+    // XXX Dummy js here since generated chosen code is 
+    // being copied in
+    $(".chzn-select").chosen({allow_sortable: true});
+    $(".chzn-select-deselect").chosen({allow_sortable: true, allow_single_deselect:true});
+
+    $('.chzn-choices').sortable();
+});
 </script>
 
 <title>Welcome to Plone &mdash; Site</title>
