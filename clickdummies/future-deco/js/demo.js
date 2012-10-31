@@ -272,14 +272,5 @@
         // Init notifications
         $.decoNotifications();
 
-        $("#toggle").click(function () {
-            if ($("#panel-maincolumn").hasClass("implicit")) {
-                $("#panel-maincolumn").removeClass("implicit");
-                $(this).attr("value", "Explicit mode (click for implicit)");
-            } else {
-                $("#panel-maincolumn").addClass("implicit");
-                $(this).attr("value", "Implicit mode (click for explicit)");
-            }
-        })
     });
 })(jQuery);

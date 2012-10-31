@@ -663,7 +663,8 @@
                 // Get content
                 var tile_content = $(this).children(".deco-tile-content");
                 tile_content.focus();
-                if (tile_content.attr("id").indexOf('deco-rich-text-init') != -1) {
+                var id = tile_content.attr("id");
+                if (id !== null && id.indexOf('deco-rich-text-init') != -1) {
 
                     // Get editor
                     var ed = tinyMCE.get(tile_content.attr("id"));
