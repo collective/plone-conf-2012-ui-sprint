@@ -11,18 +11,6 @@ var ContentFinder = function(id, path, multiselect) {
     self.results = $('.chzn-results', self.container);
     self.input = $('.search-field input', self.container);
     self.input.attr('value', self.input.attr('data-placeholder'));
-    self.click_test_action = function(evt) {
-        return self.test_active_click(evt);
-    };
-    $(document).click(self.click_test_action);
-
-    self.test_active_click = function(evt) {
-        if ($(evt.target).parents(self.id).length) {
-            return this.active_field = true;
-        } else {
-            self.dropdown.css({'left': -9000});
-        }
-    };
 
     var open_dropdown = function(e) {
         tagName = $(e.target).prop('tagName');
@@ -221,8 +209,6 @@ ContentFinder.prototype.resize = function() {
         "top": dd_top + "px"
     });
 };
-
-
 $(document).ready(function () {
     $('.finder').each(function() {
         var url = $(this).attr('data-url');
