@@ -29,48 +29,49 @@ var ContentFinder = function(id, path, multiselect) {
         if (tagName == 'UL' || tagName == 'INPUT') {
             if (self.input.attr('value') == self.input.attr('data-placeholder')) {
                 self.input.attr('value', '');
-            };
+            }
             self.dropdown.css({'left': 0});
         }
     };
     var close_dropdown = function(e) {
         tagName = $(e.target).prop('tagName');
         if (tagName == 'UL' || tagName == 'INPUT') {
-            if (self.input.attr('value') == '') {
+            if (self.input.attr('value') === '') {
                 self.input.attr('value', self.input.attr('data-placeholder'));
-            };
+            }
             self.dropdown.css({'left': -9000});
         }
-    }
+    };
     self.choices.toggle(open_dropdown, close_dropdown);
     self.current_path = path;
 };
 
 ContentFinder.prototype.selected_uids = function() {
-    var uids = []
+    var uids = [];
     for (var i=0; i<this.selecteditems.length; i++) {
         var selected = this.selecteditems[i];
         uids.push(selected.uid);
     }
     return uids;
-}
+};
 
 ContentFinder.prototype.listdir = function(path) {
-    var self = this;
-    var html = [];
+    var self = this,
+        html = [],
+        selected;
     self.data = finderdata[path];
     // create the list of items to choose from
     for (var i=0; i<self.data.items.length; i++) {
         var item = self.data.items[i];
         var folderish = item.is_folderish ? ' folderish ' : ' not-folderish ';
-        var selected = $.inArray(item.uid, self.selected_uids()) != -1;
+        selected = $.inArray(item.uid, self.selected_uids()) != -1;
         var selected_class = selected ? ' selected ' : '';
         $.merge(html, [
             '<li class="active-result' + folderish + selected_class + '" data-url="' + item.url + '" data-uid="' + item.uid + '">',
             '<span class="contenttype-' + item.normalized_type + '">' + item.title + '</span>',
             '</li>'
             ]
-        )
+        );
     }
     this.results.html(html.join(''));
 
@@ -78,8 +79,8 @@ ContentFinder.prototype.listdir = function(path) {
        this is necessary since selecteditems contains items selected
        across all folders
     */
-    self.selectedresults = []
-    for (var i=0; i<self.selecteditems.length; i++) {
+    self.selectedresults = [];
+    for (i=0; i<self.selecteditems.length; i++) {
         selected = self.selecteditems[i];
         result = $('li[data-uid="' + selected.uid + '"]', this.container);
         if (result.length > 0) {
@@ -90,7 +91,7 @@ ContentFinder.prototype.listdir = function(path) {
     $('li.not-folderish', this.results)
         .unbind('.finderresult')
         .bind('click.finderresult', function() {
-            self.result_click($(this))
+            self.result_click($(this));
             });
 
     $('li.folderish', this.container).single_double_click(
@@ -129,7 +130,7 @@ ContentFinder.prototype.listdir = function(path) {
             self.listdir($(this).attr('href'));
         });
 
-}
+};
 
 ContentFinder.prototype.select_item = function(uid) {
     var self = this;
@@ -139,7 +140,7 @@ ContentFinder.prototype.select_item = function(uid) {
             self.selecteditems.push(item);
         }
     }
-}
+};
 
 ContentFinder.prototype.deselect_item = function(uid) {
     var self = this, lst = [];
@@ -150,13 +151,14 @@ ContentFinder.prototype.deselect_item = function(uid) {
         }
     }
     self.selecteditems = lst;
-}
+};
 
 ContentFinder.prototype.result_click = function(item) {
-    var self = this;
+    var self = this,
+        selected, i;
     if (!self.multiselect) {
-        var selected = self.selectedresults[0];
-        if (selected != undefined && item != selected) {
+        selected = self.selectedresults[0];
+        if (selected !== undefined && item !== selected) {
             selected.toggleClass('selected');
             self.deselect_item(selected.attr('data-uid'));
         }
@@ -166,9 +168,9 @@ ContentFinder.prototype.result_click = function(item) {
     } else {
         // remove item from list if it was deselected
         if (item.hasClass('selected')) {
-            var new_lst = []
-            for (var i=0; i<self.selectedresults.length; i++) {
-                var selected = self.selectedresults[i];
+            var new_lst = [];
+            for (i=0; i<self.selectedresults.length; i++) {
+                selected = self.selectedresults[i];
                 if (selected.attr('data-uid') == item.attr('data-uid')) {
                     selected.toggleClass('selected');
                     self.deselect_item(selected.attr('data-uid'));
@@ -185,9 +187,9 @@ ContentFinder.prototype.result_click = function(item) {
     }
 
     // add selections to search input
-    html = []
-    for (var i=0; i < this.selecteditems.length; i++) {
-        var item = this.selecteditems[i];
+    html = [];
+    for (i=0; i < this.selecteditems.length; i++) {
+        item = this.selecteditems[i];
         html.push('<li class="search-choice"><span>' + item.title + '</span><a href="javascript:void(0)" class="search-choice-close" rel="3" data-uid="' + item.uid + '"></a></li>');
     }
     html.push('<li class="search-field"><input type="text" style="width: 172px;" autocomplete="off" class="default" data-placeholder="Click to search or browse"></li>');
@@ -199,16 +201,16 @@ ContentFinder.prototype.result_click = function(item) {
             var el = $(this);
             var uid = el.attr('data-uid');
             el.parent().remove();
-            var el = $('li.active-result[data-uid="' + uid + '"]');
+            el = $('li.active-result[data-uid="' + uid + '"]');
             // only trigger result_click if the selected item is in the
             // of selected results
-            if (el.length == 0) {
+            if (el.length === 0) {
                 self.deselect_item(uid);
                 self.resize();
             }
             else {
                 self.result_click(el);
-            };
+            }
         });
     self.resize();
 };
