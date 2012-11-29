@@ -33,15 +33,52 @@ var ContentFinder = function(id, path, multiselect) {
         }
     };
     var keyboard_navigation = function (evt) {
-        if ($(evt.target) === self.input) {
+        var highlight;
+        if (evt.target === self.input[0]) {
             switch(evt.keyCode){
                 case 40:
-                // arrow down
-                break;
+                    // arrow down
+                    if ($('.LSHighlight', self.results).length === 0) {
+                        // highlight the first item in the list
+                        self.results.children()
+                            .first()
+                            .addClass('LSHighlight');
+                    } else {
+                        // highlight the next item in the list
+                        $('.LSHighlight', self.results)
+                            .first()
+                            .removeClass('LSHighlight')
+                            .next()
+                            .addClass('LSHighlight');
+                    }
+                    break;
+
                 case 38:
-                // arrow up
-                break;
+                    // arrow up
+                    if ($('.LSHighlight', self.results).length === 0) {
+                        // highlight the last item in the list
+                        self.results.children()
+                            .last()
+                            .addClass('LSHighlight');
+                    } else {
+                        // highlight the previous item in the list
+                        $('.LSHighlight', self.results)
+                            .first()
+                            .removeClass('LSHighlight')
+                            .prev()
+                            .addClass('LSHighlight');
+                    }
+                    break;
+
+                case 13:
+                    // select item on Enter
+                    if ($('.LSHighlight', self.results).length !== 0) {
+                        $('.LSHighlight', self.results)
+                            .first()
+                            .click();
+                    }
             }
+            evt.preventDefault();
         }
     };
     self.choices
