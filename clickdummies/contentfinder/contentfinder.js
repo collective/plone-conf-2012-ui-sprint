@@ -78,6 +78,10 @@ var ContentFinder = function(id, path, multiselect) {
                             .first()
                             .click();
                     }
+                    break;
+
+                default:
+                    return true;
             }
             evt.preventDefault();
         }
@@ -147,6 +151,7 @@ ContentFinder.prototype.listdir = function(path) {
     );
 
     // breadcrumbs
+    html = [];
     len = self.data.path.length;
     $.each(self.data.path, function (i, item) {
         if (i > 0) {
