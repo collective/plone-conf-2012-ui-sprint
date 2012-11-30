@@ -1,3 +1,5 @@
+/*global finderdata:false*/
+
 var ContentFinder = function(id, path, multiselect) {
     var self = this;
     self.id = id;
@@ -13,9 +15,9 @@ var ContentFinder = function(id, path, multiselect) {
     self.input.attr('value', self.input.attr('data-placeholder'));
 
     var open_dropdown = function(e) {
-        tagName = $(e.target).prop('tagName');
-        if (tagName == 'UL' || tagName == 'INPUT') {
-            if (self.input.attr('value') == self.input.attr('data-placeholder')) {
+        var tagName = $(e.target).prop('tagName');
+        if (tagName === 'UL' || tagName === 'INPUT') {
+            if (self.input.attr('value') === self.input.attr('data-placeholder')) {
                 self.input.attr('value', '');
             }
             self.input.focus();
@@ -23,8 +25,8 @@ var ContentFinder = function(id, path, multiselect) {
         }
     };
     var close_dropdown = function(e) {
-        tagName = $(e.target).prop('tagName');
-        if (tagName == 'UL' || tagName == 'INPUT') {
+        var tagName = $(e.target).prop('tagName');
+        if (tagName === 'UL' || tagName === 'INPUT') {
             if (self.input.attr('value') === '') {
                 self.input.attr('value', self.input.attr('data-placeholder'));
             }
@@ -33,7 +35,6 @@ var ContentFinder = function(id, path, multiselect) {
         }
     };
     var keyboard_navigation = function (evt) {
-        var highlight;
         if (evt.target === self.input[0]) {
             switch(evt.keyCode){
                 case 40:
@@ -99,13 +100,13 @@ ContentFinder.prototype.selected_uids = function() {
 ContentFinder.prototype.listdir = function(path) {
     var self = this,
         html = [],
-        selected;
+        selected, result, len;
     self.data = finderdata[path];
     // create the list of items to choose from
     for (var i=0; i<self.data.items.length; i++) {
         var item = self.data.items[i];
         var folderish = item.is_folderish ? ' folderish ' : ' not-folderish ';
-        selected = $.inArray(item.uid, self.selected_uids()) != -1;
+        selected = $.inArray(item.uid, self.selected_uids()) !== -1;
         var selected_class = selected ? ' selected ' : '';
         $.merge(html, [
             '<li class="active-result' + folderish + selected_class + '" data-url="' + item.url + '" data-uid="' + item.uid + '">',
@@ -146,7 +147,6 @@ ContentFinder.prototype.listdir = function(path) {
     );
 
     // breadcrumbs
-    html = [];
     len = self.data.path.length;
     $.each(self.data.path, function (i, item) {
         if (i > 0) {
@@ -173,20 +173,20 @@ ContentFinder.prototype.listdir = function(path) {
 };
 
 ContentFinder.prototype.select_item = function(uid) {
-    var self = this;
+    var self = this, item;
     for (var i=0; i<self.data.items.length; i++) {
         item = self.data.items[i];
-        if (item.uid == uid) {
+        if (item.uid === uid) {
             self.selecteditems.push(item);
         }
     }
 };
 
 ContentFinder.prototype.deselect_item = function(uid) {
-    var self = this, lst = [];
+    var self = this, lst = [], item;
     for (var i=0; i<self.selecteditems.length; i++) {
         item = self.selecteditems[i];
-        if (item.uid != uid) {
+        if (item.uid !== uid) {
             lst.push(item);
         }
     }
@@ -195,7 +195,7 @@ ContentFinder.prototype.deselect_item = function(uid) {
 
 ContentFinder.prototype.result_click = function(item) {
     var self = this,
-        selected, i;
+        selected, i, html = [];
     if (!self.multiselect) {
         selected = self.selectedresults[0];
         if (selected !== undefined && item !== selected) {
@@ -211,7 +211,7 @@ ContentFinder.prototype.result_click = function(item) {
             var new_lst = [];
             for (i=0; i<self.selectedresults.length; i++) {
                 selected = self.selectedresults[i];
-                if (selected.attr('data-uid') == item.attr('data-uid')) {
+                if (selected.attr('data-uid') === item.attr('data-uid')) {
                     selected.toggleClass('selected');
                     self.deselect_item(selected.attr('data-uid'));
                 } else {
@@ -227,7 +227,6 @@ ContentFinder.prototype.result_click = function(item) {
     }
 
     // add selections to search input
-    html = [];
     for (i=0; i < this.selecteditems.length; i++) {
         item = this.selecteditems[i];
         html.push('<li class="search-choice"><span>' + item.title + '</span><a href="javascript:void(0)" class="search-choice-close" rel="3" data-uid="' + item.uid + '"></a></li>');
