@@ -39,6 +39,7 @@ var ContentFinder = function(id, path, multiselect) {
             switch(evt.keyCode){
                 case 40:
                     // arrow down
+                    open_dropdown(evt);
                     if ($('.LSHighlight', self.results).length === 0) {
                         // highlight the first item in the list
                         self.results.children()
@@ -78,6 +79,11 @@ var ContentFinder = function(id, path, multiselect) {
                             .first()
                             .click();
                     }
+                    break;
+
+                case 27:
+                    // close dropdown on Escape
+                    close_dropdown(evt);
                     break;
 
                 default:
