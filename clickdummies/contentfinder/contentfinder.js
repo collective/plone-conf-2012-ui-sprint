@@ -142,12 +142,16 @@ ContentFinder.prototype.listdir = function(path) {
     $('li.not-folderish', this.results)
         .unbind('.finderresult')
         .bind('click.finderresult', function() {
-            self.result_click($(this));
+            /* only select when clicking on result, don't toggle */
+            if ($(this).hasClass('selected') === false)
+                self.result_click($(this));
             });
 
     $('li.folderish', this.container).single_double_click(
         function() {
-            self.result_click($(this));
+            /* only select when clicking on result, don't toggle */
+            if ($(this).hasClass('selected') === false)
+                self.result_click($(this));
         },
         function(e) {
             e.preventDefault();
