@@ -118,12 +118,22 @@ ContentFinder.prototype.listdir = function(path) {
         var folderish = item.is_folderish ? ' folderish ' : ' not-folderish ';
         selected = $.inArray(item.uid, self.selected_uids()) !== -1;
         var selected_class = selected ? ' selected ' : '';
-        $.merge(html, [
-            '<li class="active-result' + folderish + selected_class + '" data-url="' + item.url + '" data-uid="' + item.uid + '">',
-            '<span class="contenttype-' + item.normalized_type + '">' + item.title + '</span>',
-            '</li>'
-            ]
-        );
+        if (item.is_folderish) {
+            $.merge(html, [
+                '<li class="active-result' + folderish + selected_class + '" data-url="' + item.url + '" data-uid="' + item.uid + '">',
+                '<span class="contenttype-' + item.normalized_type + '">' + item.title + '</span>',
+                '<a class="open-folder" data-url="' + item.url + '" data-uid="' + item.uid + '"><img src="right-arrow.png"/></a>',
+                '</li>'
+                ]
+            );
+        } else {
+            $.merge(html, [
+                '<li class="active-result' + folderish + selected_class + '" data-url="' + item.url + '" data-uid="' + item.uid + '">',
+                '<span class="contenttype-' + item.normalized_type + '">' + item.title + '</span>',
+                '</li>'
+                ]
+            );
+        }
     }
     this.results.html(html.join(''));
 
@@ -147,15 +157,19 @@ ContentFinder.prototype.listdir = function(path) {
                 self.result_click($(this));
             });
 
-    $('li.folderish', this.container).single_double_click(
+    $('li.folderish', this.container).click(
         function() {
             /* only select when clicking on result, don't toggle */
             if ($(this).hasClass('selected') === false)
                 self.result_click($(this));
-        },
+        }
+    );
+
+    $('a.open-folder', this.container).click(
         function(e) {
             e.preventDefault();
             e.stopPropagation();
+            console.log($(this));
             self.listdir($(this).attr('data-url'));
         }
     );

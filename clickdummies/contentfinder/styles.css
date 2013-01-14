@@ -10,3 +10,8 @@ body{
 .search-choice span{
     cursor: move;
 }
+
+.open-folder {
+    float: right;
+    margin-top: -5px;
+}
