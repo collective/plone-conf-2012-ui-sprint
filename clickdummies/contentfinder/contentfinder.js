@@ -8,11 +8,14 @@ var ContentFinder = function(id, path, multiselect) {
     self.activeresults = [];
     self.selecteditems = [];
     self.selectedresults = [];
-    self.choices = $('.chzn-choices', self.container);
-    self.dropdown = $('.chzn-drop', self.container);
-    self.results = $('.chzn-results', self.container);
+    self.choices = $('.finder-choices', self.container);
+    self.dropdown = $('.finder-dropdown', self.container);
+    self.results = $('.finder-results', self.container);
     self.input = $('.search-field input', self.container);
     self.input.attr('value', self.input.attr('data-placeholder'));
+    // self.single_backstroke_delete = this.options.single_backstroke_delete || false;
+    self.single_backstroke_delete = false;
+
 
     var open_dropdown = function(e) {
         var tagName = $(e.target).prop('tagName');
@@ -34,9 +37,19 @@ var ContentFinder = function(id, path, multiselect) {
             self.dropdown.css({'left': -9000});
         }
     };
+
     var keyboard_navigation = function (evt) {
         if (evt.target === self.input[0]) {
             switch(evt.keyCode){
+
+                case 8:
+                    var backstroke_length = self.input.val().length;
+                    if (self.multiselect && backstroke_length < 1 && 
+                        self.selecteditems.length > 0) {
+                        return self.keydown_backstroke();
+                    }
+                    break;
+
                 case 40:
                     // arrow down
                     open_dropdown(evt);
@@ -85,6 +98,7 @@ var ContentFinder = function(id, path, multiselect) {
                     // close dropdown on Escape
                     close_dropdown(evt);
                     break;
+
 
                 default:
                     return true;
@@ -152,16 +166,17 @@ ContentFinder.prototype.listdir = function(path) {
     $('li.not-folderish', this.results)
         .unbind('.finderresult')
         .bind('click.finderresult', function() {
-            /* only select when clicking on result, don't toggle */
-            if ($(this).hasClass('selected') === false)
-                self.result_click($(this));
-            });
+            self.result_click($(this));
+        });
 
-    $('li.folderish', this.container).click(
+    $('li.folderish', this.container).single_double_click(
         function() {
-            /* only select when clicking on result, don't toggle */
-            if ($(this).hasClass('selected') === false)
-                self.result_click($(this));
+            self.result_click($(this));
+        },
+        function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            self.listdir($(this).attr('data-url'));
         }
     );
 
@@ -169,8 +184,16 @@ ContentFinder.prototype.listdir = function(path) {
         function(e) {
             e.preventDefault();
             e.stopPropagation();
-            console.log($(this));
             self.listdir($(this).attr('data-url'));
+        }
+    );
+
+    $('a.open-folder img', this.container).hover(
+        function() {
+            $(this).attr('src', 'right-arrow-active.png');
+        },
+        function() {
+            $(this).attr('src', 'right-arrow.png');
         }
     );
 
@@ -267,21 +290,53 @@ ContentFinder.prototype.result_click = function(item) {
     $('a.search-choice-close', this.chosen)
         .unbind('.selected')
         .bind('click.selected', function() {
-            var el = $(this);
-            var uid = el.attr('data-uid');
-            el.parent().remove();
-            el = $('li.active-result[data-uid="' + uid + '"]');
-            // only trigger result_click if the selected item is in the
-            // of selected results
-            if (el.length === 0) {
-                self.deselect_item(uid);
-                self.resize();
-            }
-            else {
-                self.result_click(el);
-            }
+            self.choice_destroy($(this));
         });
     self.resize();
+};
+
+
+ContentFinder.prototype.choice_destroy = function(link) {
+    var self = this,
+        uid = link.attr('data-uid');
+    link.parent().remove();
+    el = $('li.active-result[data-uid="' + uid + '"]');
+    // only trigger result_click if the selected item is in the
+    // of selected results
+    if (el.length === 0) {
+        self.deselect_item(uid);
+        self.resize();
+    }
+    else {
+        self.result_click(el);
+    }
+};
+
+ContentFinder.prototype.keydown_backstroke = function() {
+    console.log(this.pending_backstroke);
+    var next_available_destroy;
+    if (this.pending_backstroke) {
+        this.choice_destroy(this.pending_backstroke.find("a").first());
+        return this.clear_backstroke();
+    } else {
+        next_available_destroy = $("li.search-choice", this.choices).last();
+        console.log(next_available_destroy.length);
+        if (next_available_destroy.length && !next_available_destroy.hasClass("search-choice-disabled")) {
+            this.pending_backstroke = next_available_destroy;
+            if (this.single_backstroke_delete) {
+                return this.keydown_backstroke();
+            } else {
+                return this.pending_backstroke.addClass("search-choice-focus");
+            }
+        }
+    }
+};
+
+ContentFinder.prototype.clear_backstroke = function() {
+    if (this.pending_backstroke) {
+    this.pending_backstroke.removeClass("search-choice-focus");
+    }
+    return this.pending_backstroke = null;
 };
 
 ContentFinder.prototype.resize = function() {
@@ -297,3 +352,25 @@ $(document).ready(function () {
         finder.listdir(url);
     });
 });
+
+// Author:  Jacek Becela
+// Source:  http://gist.github.com/399624
+// License: MIT
+jQuery.fn.single_double_click = function(single_click_callback, double_click_callback, timeout) {
+  return this.each(function(){
+    var clicks = 0, self = this;
+    jQuery(this).click(function(event){
+      clicks++;
+      if (clicks == 1) {
+        setTimeout(function(){
+          if(clicks == 1) {
+            single_click_callback.call(self, event);
+          } else {
+            double_click_callback.call(self, event);
+          }
+          clicks = 0;
+        }, timeout || 300);
+      }
+    });
+  });
+}
